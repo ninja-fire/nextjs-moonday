@@ -43,7 +43,7 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex p-2 gap-2 grow items-center justify-center rounded-xl text-sm font-medium text-caption opacity-80 hover:opacity-100 hover:bg-transparentbg hover:text-label md:flex-none md:justify-start",
+              "group/{icon} transition-all flex p-2 gap-2 items-center justify-start rounded-xl text-sm font-medium text-caption hover:opacity-100 hover:bg-transparentbg hover:text-label md:flex-none",
               {
                 'bg-transparentbg text-label opacity-100': pathname === link.href,
               },
@@ -54,9 +54,9 @@ export default function NavLinks() {
             priority
             src={LinkIcon} 
             alt=''
-            className="opacity-90"
+            className="opacity-80 group-hover/{icon}:opacity-100"
             />
-            <p className="transition-all text-label hidden group-hover:block">{link.name}</p>
+            <p className="transition-all hidden group-hover:block">{link.name}</p>
           </Link>
         );
       })}

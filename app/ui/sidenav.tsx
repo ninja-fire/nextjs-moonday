@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function SideNav() {
     return (
       <>
-        <Link className="" href="/">
+        <Link className="scale-90 md:scale-100" href="/">
           <div className="">
           <Image priority src={logo} alt='' />
           </div>
