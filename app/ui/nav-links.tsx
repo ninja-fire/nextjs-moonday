@@ -10,9 +10,11 @@ import projectsicon from '../../public/icons/projects.svg'
 import contacticon from '../../public/icons/contact.svg'
 
 const links = [
-  { name: 'Home',
+  {
+    name: 'Home',
   href: '/',
-  icon: homeicon },
+  icon: homeicon
+},
   {
     name: 'Services',
     href: '/services',
@@ -41,9 +43,9 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
+              "flex p-2 gap-2 grow items-center justify-center rounded-xl text-sm font-medium text-caption opacity-80 hover:opacity-100 hover:bg-transparentbg hover:text-label md:flex-none md:justify-start",
               {
-                'bg-sky-100 text-blue-600': pathname === link.href,
+                'bg-transparentbg text-label opacity-100': pathname === link.href,
               },
             )}
             
@@ -52,9 +54,9 @@ export default function NavLinks() {
             priority
             src={LinkIcon} 
             alt=''
+            className="opacity-90"
             />
-            {/* <LinkIcon className="w-6" /> */}
-            <p className="hidden md:block">{link.name}</p>
+            <p className="transition-all text-label hidden group-hover:block">{link.name}</p>
           </Link>
         );
       })}
