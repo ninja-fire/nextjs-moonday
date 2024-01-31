@@ -64,7 +64,7 @@ export default function FooterLinks() {
         <>
             {links.map((link) => {
                 return (
-                    <div key={link.name} className='flex flex-col justify-start items-start gap-2'>
+                    <div key={link.name} className='flex flex-col justify-start items-start gap-2 w-full md:w-auto'>
                         <Link
                             key={link.name}
                             href={link.href}

@@ -29,8 +29,8 @@ export default function RootLayout({
       </nav>
       <div className="flex flex-grow px-16 py-16 overflow-hidden z-10 rounded-l-[32px] bg-bodybg border border-label/[.08] md:overflow-y-auto md:p-12">{children}</div>
       </main>
-      <footer className="flex flex-col gap-8 bg-background py-20 px-40">
-        <Image priority src={gradient} alt="" width={1080} height={1080} className="absolute w-full bottom-2 blur-3xl -z-1"/>
+      <footer className="flex flex-col justify-center items-start gap-8 bg-background py-20 px-20 md:px-40">
+        {/* <Image priority src={gradient} alt="" width={1080} height={1080} className="absolute bottom-2 blur-3xl -z-1"/> */}
         <Footer />
       </footer>
     </body>
