@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import NavLinks from './nav-links';
+import NavLinks from '../ui/nav-links';
 import logo from '../../public/logo/moonday-logo.svg';
 import Image from 'next/image';
 
