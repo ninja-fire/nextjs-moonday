@@ -64,12 +64,13 @@ export default function FooterLinks() {
         <>
             {links.map((link) => {
                 return (
-                    <div className='flex flex-col justify-start items-start gap-2'>
-                        <Link key={link.name}
+                    <div key={link.name} className='flex flex-col justify-start items-start gap-2'>
+                        <Link
+                            key={link.name}
                             href={link.href}
                             className="text-label hover:text-caption text-sm font-semibold">{link.name}
                         </Link>
-                        <div className='flex flex-col justify-start items-start gap-1'>
+                        <div key={link.name} className='flex flex-col justify-start items-start gap-1'>
                         {link.sublinks.map((sublink) => {
                             return (
                                     <Link
