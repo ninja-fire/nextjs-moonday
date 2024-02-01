@@ -22,6 +22,11 @@ body {
   }
 }
 
+.noise {
+  background-image: url(../../public/noise.svg);
+  
+}
+
 h1 {
   font-family: "Clash Display Variable";
   font-size: 3rem;
@@ -87,7 +92,7 @@ h5 {
 @media only screen and (max-width: 768px) {
 
   h1 {
-    font-size: 2.25rem;
+    font-size: 2.125rem;
   }
 
   h2 {

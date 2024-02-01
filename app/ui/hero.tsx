@@ -7,15 +7,15 @@ export default function Hero() {
     return (
         <div className="flex flex-col gap-16 justify-center items-center h-[48vh]">
         <div className="flex flex-col gap-6 justify-center items-center">
-          <div className="flex flex-col gap-3 justify-center items-center">
-            <div className="flex gap-2 md:gap-3 justify-center items-center flex-wrap">
+          <div className="flex flex-col gap-2 justify-center items-center">
+            <div className="flex gap-1 md:gap-3 justify-center items-center flex-wrap text-center">
             <h1>We design</h1>
-            <Image src={moon} alt="" className="scale-90 md:scale-100"/>
+            <Image src={moon} alt="" className="scale-75 md:scale-100"/>
             <h1>your</h1>
             </div>
-            <div className="flex gap-2 md:gap-3 justify-center items-center flex-wrap">
+            <div className="flex gap-1 md:gap-3 justify-center items-center flex-wrap text-center">
             <h1>brand & dapp</h1>
-            <Image src={sun} alt="" className="scale-90 md:scale-100"/>
+            <Image src={sun} alt="" className="scale-75 md:scale-100"/>
             <h1>faster</h1>
             </div>
           </div>

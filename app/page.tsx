@@ -1,25 +1,18 @@
 import Image from "next/image";
 import Button from "../app/ui/button";
-import imgex from "../public/image 3.png";
 import logoipsum from "../public/Logoipsum.svg";
 import projectsicon from '../public/icons/projects.svg';
 import avatar from '../public/avatar.png';
 import qrcode from '../public/qrcode.svg';
 import Hero from "./ui/hero";
+import FolioCard from "./ui/folioCard";
 
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <div className="flex gap-4 justify-center items-center">
-        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background"><Image src={imgex} alt="" className="h-full" /></div>
-        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background"><Image src={imgex} alt="" className="h-full" /></div>
-        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background"><Image src={imgex} alt="" className="h-full" /></div>
-        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background hidden lg:flex"><Image src={imgex} alt="" className="h-full" /></div>
-        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background hidden md:flex"><Image src={imgex} alt="" className="h-full" /></div>
-        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background hidden md:flex"><Image src={imgex} alt="" className="h-full" /></div>
-      </div>
+      <FolioCard />
 
       <div className="flex gap-16 justify-center items-center">
         <div className="flex justify-center items-center py-8"><Image src={logoipsum} alt="" /></div>
