@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,6 +21,9 @@ const config: Config = {
         'placeholder': '#7D817F',
         'transparentbg': 'rgba(231, 238, 235, 0.08)',
         'bodybg': '#1D1D1D',
+      },
+      boxShadow: {
+        'whitepers': '0px 0px 16px 0px rgba(255, 255, 255, 0.15)',
       },
     },
   },
