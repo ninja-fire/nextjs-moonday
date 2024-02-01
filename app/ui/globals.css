@@ -22,6 +22,56 @@ body {
   }
 }
 
+h1 {
+  font-family: "Clash Display Variable";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--label);
+}
+
+h2 {
+  font-family: "Clash Display Variable";
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--label);
+
+}
+
+h3 {
+  font-family: "Clash Display Variable";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.045rem;
+  text-transform: capitalize;
+  color: var(--label);
+
+}
+
+h4 {
+  font-family: "Clash Display Variable";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--label);
+
+}
+
+h5 {
+  font-family: "Clash Display Variable";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.875rem;
+
+}
+
 .buttonBG {
   background-image: url(../../public/gradient.png);
   background-clip: border-box;
@@ -32,4 +82,27 @@ body {
 
 .buttonBG:hover {
   background-size: revert;
+}
+
+@media only screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 0.875rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 0.875rem;
+  }
 }

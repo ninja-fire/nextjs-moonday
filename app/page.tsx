@@ -5,26 +5,20 @@ import logoipsum from "../public/Logoipsum.svg";
 import projectsicon from '../public/icons/projects.svg';
 import avatar from '../public/avatar.png';
 import qrcode from '../public/qrcode.svg';
+import Hero from "./ui/hero";
 
 
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col gap-16 justify-center items-center">
-        <div className="flex flex-col gap-6 justify-center items-center">
-          <h1>We design you brand & dapps faster</h1>
-          <p>We are a web3 design studio building impactful brands and super easy to use Dapps to help launch great ideas faster.</p>
-        </div>
-        <Button text="Press to Chat" target="_blank" />
-      </div>
-
-      <div className="flex gap-4 ">
+      <Hero />
+      <div className="flex gap-4 justify-center items-center">
         <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background"><Image src={imgex} alt="" className="h-full" /></div>
         <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background"><Image src={imgex} alt="" className="h-full" /></div>
         <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background"><Image src={imgex} alt="" className="h-full" /></div>
-        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background"><Image src={imgex} alt="" className="h-full" /></div>
-        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background"><Image src={imgex} alt="" className="h-full" /></div>
-        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background"><Image src={imgex} alt="" className="h-full" /></div>
+        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background hidden lg:flex"><Image src={imgex} alt="" className="h-full" /></div>
+        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background hidden md:flex"><Image src={imgex} alt="" className="h-full" /></div>
+        <div className="rounded-full flex justify-center items-center h-80 overflow-auto bg-background hidden md:flex"><Image src={imgex} alt="" className="h-full" /></div>
       </div>
 
       <div className="flex gap-16 justify-center items-center">
@@ -78,7 +72,7 @@ export default function Home() {
             <label className="form-control gap-1-row" htmlFor="branding">
               <input type="checkbox" id="branding" name="design-needs" value="branding" />
               <div className="gap-1-2">
-                <p className="subtitle">Branding and Identity Design</p>
+                <h5 className="subtitle">Branding and Identity Design</h5>
                 <p className="caption">Crafting unique visual identities that represent your brands values and
                   resonate with your target audience.</p>
               </div>
@@ -86,7 +80,7 @@ export default function Home() {
             <label className="form-control gap-1-row" htmlFor="print">
               <input type="checkbox" id="print" name="design-needs" value="print" />
               <div className="gap-1-2">
-                <p className="subtitle">Print Design</p>
+                <h5 className="subtitle">Print Design</h5>
                 <p className="caption">Creating compelling designs for print materials such as brochures,
                   business cards, posters, and more.</p>
               </div>
@@ -94,7 +88,7 @@ export default function Home() {
             <label className="form-control gap-1-row" htmlFor="social">
               <input type="checkbox" id="social" name="design-needs" value="social" />
               <div className="gap-1-2">
-                <p className="subtitle">Social Media Graphics</p>
+                <h5 className="subtitle">Social Media Graphics</h5>
                 <p className="caption">Crafting eye-catching graphics optimized for social media platforms to
                   boost your online presence.</p>
               </div>
@@ -102,7 +96,7 @@ export default function Home() {
             <label className="form-control gap-1-row" htmlFor="app">
               <input type="checkbox" id="app" name="design-needs" value="app" />
               <div className="gap-1-2">
-                <p className="subtitle">Blockchain Application</p>
+                <h5 className="subtitle">Blockchain Application</h5>
                 <p className="caption">Crafting user-friendly and visually appealing interfaces for blockchain
                   platforms, wallets, and decentralized applications.</p>
               </div>
@@ -110,7 +104,7 @@ export default function Home() {
             <label className="form-control gap-1-row" htmlFor="website">
               <input type="checkbox" id="website" name="design-needs" value="website" />
               <div className="gap-1-2">
-                <p className="subtitle">Web3 Website Design</p>
+                <h5 className="subtitle">Web3 Website Design</h5>
                 <p className="caption">Designing immersive websites that seamlessly integrate blockchain
                   technology, providing interactive and engaging experiences.</p>
               </div>
@@ -118,7 +112,7 @@ export default function Home() {
             <label className="form-control gap-1-row" htmlFor="metaverse">
               <input type="checkbox" id="metaverse" name="design-needs" value="metaverse" />
               <div className="gap-1-2">
-                <p className="subtitle">Brand Integration into Metaverse</p>
+                <h5 className="subtitle">Brand Integration into Metaverse</h5>
                 <p className="caption">Crafting user-friendly and visually appealing interfaces for blockchain
                   platforms, wallets, and decentralized applications.</p>
               </div>
@@ -126,7 +120,7 @@ export default function Home() {
             <label className="form-control gap-1-row" htmlFor="consulting">
               <input type="checkbox" id="consulting" name="design-needs" value="consulting" />
               <div className="gap-1-2">
-                <p className="subtitle">Consultation and Ideation</p>
+                <h5 className="subtitle">Consultation and Ideation</h5>
                 <p className="caption">Collaborating with you to brainstorm, conceptualize, and refine design
                   ideas tailored to your specific project.</p>
               </div>
@@ -162,7 +156,7 @@ export default function Home() {
 
           <div className="sticky-btn" id="btn-container">
             <button type="button" className="btn-secondary hidden" id="btn-back">
-              <Button text="Back" target=""/>
+              <Button text="Back" target="" />
             </button>
             <div className="btn-primary-out" id="btn-wishlist"><button className="btn-primary-in"
               id="validate-wishlist-button" type="button">Validate My Wishlist</button></div>
