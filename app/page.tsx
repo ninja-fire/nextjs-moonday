@@ -79,7 +79,7 @@ export default function Home() {
               <input type="checkbox" id="branding" name="design-needs" value="branding" />
               <div className="gap-1-2">
                 <p className="subtitle">Branding and Identity Design</p>
-                <p className="caption">Crafting unique visual identities that represent your brand's values and
+                <p className="caption">Crafting unique visual identities that represent your brands values and
                   resonate with your target audience.</p>
               </div>
             </label>
@@ -171,7 +171,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-8 justify-center items-center">
-        <h2>Don't trust, verify</h2>
+        <h2>Dont trust verify</h2>
         <div className="flex gap-4 items-center jusitfy-center">
           <div className="flex flex-col gap-6 px-8 py-6 rounded-3xl bg-background">
             <div className="flex gap-2 items-center">
