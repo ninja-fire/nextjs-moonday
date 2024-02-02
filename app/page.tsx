@@ -2,11 +2,11 @@ import Image from "next/image";
 import Button from "../app/ui/button";
 import logoipsum from "../public/Logoipsum.svg";
 import projectsicon from '../public/icons/projects.svg';
-import avatar from '../public/avatar.png';
 import Hero from "./ui/hero";
 import FolioCard from "./ui/folioCard";
 import gradient from '../public/gradient.png';
 import CtaContact from "./ui/ctacontact";
+import Testimonials from "./ui/testimonials";
 
 
 export default function Home() {
@@ -28,21 +28,21 @@ export default function Home() {
       <div className="flex flex-col gap-6 justify-center items-center">
         <h2>Why you should work with us</h2>
         <div className="flex gap-4 justify-center items-center flex-wrap">
-          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg max-w-sm">
+          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg border border-transparentbg max-w-sm">
             <div className="flex gap-2 items-center">
               <Image src={projectsicon} alt="" />
               <h3>Title benefice 1</h3>
             </div>
             <p className="text-sm font-medium text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
           </div>
-          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg max-w-sm">
+          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg border border-transparentbg max-w-sm">
             <div className="flex gap-2 items-center">
               <Image src={projectsicon} alt="" />
               <h3>Title benefice 2</h3>
             </div>
             <p className="text-sm font-medium text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
           </div>
-          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg max-w-sm">
+          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg border border-transparentbg max-w-sm">
             <div className="flex gap-2 items-center">
               <Image src={projectsicon} alt="" />
               <h3>Title benefice 3</h3>
@@ -160,42 +160,8 @@ export default function Home() {
         </form>
       </div>
 
-      <div className="flex flex-col gap-8 justify-center items-center">
-        <h2>Dont trust verify</h2>
-        <div className="flex gap-4 items-center jusitfy-center">
-          <div className="flex flex-col gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-            <div className="flex gap-2 items-center">
-              <Image src={avatar} alt="" />
-              <div className="flex flex-col">
-                <p className="font-sm text-label font-semibold">John Doe</p>
-                <p className="text-start text-xs font-medium">Blabla CTO</p>
-              </div>
-            </div>
-            <p className="text-start text-sm font-medium text-caption">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
-          </div>
-          <div className="flex flex-col gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-            <div className="flex gap-2 items-center">
-              <Image src={avatar} alt="" />
-              <div className="flex flex-col">
-                <p className="font-sm text-label font-semibold">John Doe</p>
-                <p className="text-start text-xs font-medium">Blabla CTO</p>
-              </div>
-            </div>
-            <p className="text-start text-sm font-medium text-caption">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
-          </div>
-          <div className="flex flex-col gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-            <div className="flex gap-2 items-center">
-              <Image src={avatar} alt="" />
-              <div className="flex flex-col">
-                <p className="font-sm text-label font-semibold">John Doe</p>
-                <p className="text-start text-xs font-medium">Blabla CTO</p>
-              </div>
-            </div>
-            <p className="text-start text-sm font-medium text-caption">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
-          </div>
-        </div>
-      </div>
-
+      <Testimonials />
+      
       <CtaContact />
     </>
   );

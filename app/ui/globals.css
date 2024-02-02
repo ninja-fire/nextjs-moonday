@@ -89,6 +89,11 @@ h5 {
   background-size: revert;
 }
 
+.light-left {
+  position: absolute;
+  left: 0;
+}
+
 /* .light-left {
   background-image: url(../../public/light-left.png);
   background-clip: border-box;
