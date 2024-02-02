@@ -22,6 +22,61 @@ body {
   }
 }
 
+.noise {
+  background-image: url(../../public/noise.svg);
+  
+}
+
+h1 {
+  font-family: "Clash Display Variable";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--label);
+}
+
+h2 {
+  font-family: "Clash Display Variable";
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--label);
+
+}
+
+h3 {
+  font-family: "Clash Display Variable";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.045rem;
+  text-transform: capitalize;
+  color: var(--label);
+
+}
+
+h4 {
+  font-family: "Clash Display Variable";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--label);
+
+}
+
+h5 {
+  font-family: "Clash Display Variable";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.875rem;
+
+}
+
 .buttonBG {
   background-image: url(../../public/gradient.png);
   background-clip: border-box;
@@ -32,4 +87,62 @@ body {
 
 .buttonBG:hover {
   background-size: revert;
+}
+
+.light-left {
+  position: absolute;
+  left: 0;
+}
+
+/* .light-left {
+  background-image: url(../../public/light-left.png);
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: -7rem;
+}
+
+.light-bottom {
+  background-image: url(../../public/light-bottom.png);
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -7rem;
+} */
+
+.light {
+  background-image: url(../../public/light.png);
+  /* background-clip: border-box; */
+  background-repeat: no-repeat;
+  background-position-x: -5rem;
+  background-position-y: 4rem;
+  background-size: cover;
+
+}
+
+.inline {
+  inline-size: max-content;
+}
+
+@media only screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 2.125rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 0.875rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 0.875rem;
+  }
 }
