@@ -3,9 +3,10 @@ import Button from "../app/ui/button";
 import logoipsum from "../public/Logoipsum.svg";
 import projectsicon from '../public/icons/projects.svg';
 import avatar from '../public/avatar.png';
-import qrcode from '../public/qrcode.svg';
 import Hero from "./ui/hero";
 import FolioCard from "./ui/folioCard";
+import gradient from '../public/gradient.png';
+import CtaContact from "./ui/ctacontact";
 
 
 export default function Home() {
@@ -14,113 +15,115 @@ export default function Home() {
       <Hero />
       <FolioCard />
 
-      <div className="flex gap-16 justify-center items-center">
-        <div className="flex justify-center items-center py-8"><Image src={logoipsum} alt="" /></div>
-        <div className="flex justify-center items-center py-8"><Image src={logoipsum} alt="" /></div>
-        <div className="flex justify-center items-center py-8"><Image src={logoipsum} alt="" /></div>
-        <div className="flex justify-center items-center py-8"><Image src={logoipsum} alt="" /></div>
-        <div className="flex justify-center items-center py-8"><Image src={logoipsum} alt="" /></div>
-        <div className="flex justify-center items-center py-8"><Image src={logoipsum} alt="" /></div>
-        <div className="flex justify-center items-center py-8"><Image src={logoipsum} alt="" /></div>
+      <div className="flex gap-0 md:gap-16 justify-center items-center opacity-80">
+        <div className="contents justify-center items-center py-8"><Image src={logoipsum} alt="" width={169} height={40} className="scale-50 md:scale-75 ld:scale-90" /></div>
+        <div className="contents justify-center items-center py-8"><Image src={logoipsum} alt="" width={169} height={40} className="scale-50 md:scale-75 ld:scale-90" /></div>
+        <div className="contents justify-center items-center py-8"><Image src={logoipsum} alt="" width={169} height={40} className="scale-50 md:scale-75 ld:scale-90" /></div>
+        <div className="contents justify-center items-center py-8"><Image src={logoipsum} alt="" width={169} height={40} className="scale-50 md:scale-75 ld:scale-90" /></div>
+        <div className="contents justify-center items-center py-8"><Image src={logoipsum} alt="" width={169} height={40} className="scale-50 md:scale-75 ld:scale-90" /></div>
+        <div className="contents justify-center items-center py-8"><Image src={logoipsum} alt="" width={169} height={40} className="scale-50 md:scale-75 ld:scale-90" /></div>
+        <div className="contents justify-center items-center py-8"><Image src={logoipsum} alt="" width={169} height={40} className="scale-50 md:scale-75 ld:scale-90" /></div>
       </div>
 
-      <div className="flex flex-col gap-4 justify-center items-center">
-        <h2>why you should work with us</h2>
-        <div className="flex gap-4 justify-center items-center">
-          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg">
+      <div className="flex flex-col gap-6 justify-center items-center">
+        <h2>Why you should work with us</h2>
+        <div className="flex gap-4 justify-center items-center flex-wrap">
+          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg max-w-sm">
             <div className="flex gap-2 items-center">
               <Image src={projectsicon} alt="" />
               <h3>Title benefice 1</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
+            <p className="text-sm font-medium text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
           </div>
-          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg">
+          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg max-w-sm">
             <div className="flex gap-2 items-center">
               <Image src={projectsicon} alt="" />
               <h3>Title benefice 2</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
+            <p className="text-sm font-medium text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
           </div>
-          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg">
+          <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg max-w-sm">
             <div className="flex gap-2 items-center">
               <Image src={projectsicon} alt="" />
               <h3>Title benefice 3</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
+            <p className="text-sm font-medium text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col gap-6 py-16 p-8 bg-background rounded-3xl">
+      <div className="light flex flex-col gap-6 py-16 p-40 bg-background overflow-y-b-clip rounded-3xl justify-center items-center border border-transparentbg shadow-innerwhole">
+        {/* <Image priority src={gradient} alt="" width={1080} height={1080} className="absolute h-full left-32 blur-3xl -z-1"/> */}
+
         <div className="flex flex-col gap-4 justify-center items-center">
           <h2>What are your design needs?</h2>
-          <p>Our aim is to understand your unique vision and goals, and tailor our design services to suit your needs in the ever-evolving landscape of Web3 and blockchain technology.</p>
+          <p className="text-sm font-medium text-center text-caption">Our aim is to understand your unique vision and goals, and tailor our design services to suit your needs in the ever-evolving landscape of Web3 and blockchain technology.</p>
         </div>
 
-        <form className="gap-2" id="dynamic-form">
-          <div className="sticky-header">
-            <h4>Your Wish List</h4>
+        <form className="flex flex-col gap-2 bg-bodybg/[64%] backdrop-blur-md shadow-xl border border-transparentbg rounded-3xl gap-6 px-8 py-6" id="dynamic-form">
+          <div className="flex pb-4 border-b border-transparentbg">
+          <h4>Your Wish List</h4>
           </div>
           <div className="gap-2 flex-start" id="form-content-needs">
             <label className="form-control gap-1-row" htmlFor="branding">
               <input type="checkbox" id="branding" name="design-needs" value="branding" />
               <div className="gap-1-2">
-                <h5 className="subtitle">Branding and Identity Design</h5>
-                <p className="caption">Crafting unique visual identities that represent your brands values and
+                <h5 className="">Branding and Identity Design</h5>
+                <p className="text-sm font-medium text-caption">Crafting unique visual identities that represent your brands values and
                   resonate with your target audience.</p>
               </div>
             </label>
             <label className="form-control gap-1-row" htmlFor="print">
               <input type="checkbox" id="print" name="design-needs" value="print" />
               <div className="gap-1-2">
-                <h5 className="subtitle">Print Design</h5>
-                <p className="caption">Creating compelling designs for print materials such as brochures,
+                <h5 className="">Print Design</h5>
+                <p className="text-sm font-medium text-caption">Creating compelling designs for print materials such as brochures,
                   business cards, posters, and more.</p>
               </div>
             </label>
             <label className="form-control gap-1-row" htmlFor="social">
               <input type="checkbox" id="social" name="design-needs" value="social" />
               <div className="gap-1-2">
-                <h5 className="subtitle">Social Media Graphics</h5>
-                <p className="caption">Crafting eye-catching graphics optimized for social media platforms to
+                <h5 className="">Social Media Graphics</h5>
+                <p className="text-sm font-medium text-caption">Crafting eye-catching graphics optimized for social media platforms to
                   boost your online presence.</p>
               </div>
             </label>
             <label className="form-control gap-1-row" htmlFor="app">
               <input type="checkbox" id="app" name="design-needs" value="app" />
               <div className="gap-1-2">
-                <h5 className="subtitle">Blockchain Application</h5>
-                <p className="caption">Crafting user-friendly and visually appealing interfaces for blockchain
+                <h5 className="">Blockchain Application</h5>
+                <p className="text-sm font-medium text-caption">Crafting user-friendly and visually appealing interfaces for blockchain
                   platforms, wallets, and decentralized applications.</p>
               </div>
             </label>
             <label className="form-control gap-1-row" htmlFor="website">
               <input type="checkbox" id="website" name="design-needs" value="website" />
               <div className="gap-1-2">
-                <h5 className="subtitle">Web3 Website Design</h5>
-                <p className="caption">Designing immersive websites that seamlessly integrate blockchain
+                <h5 className="">Web3 Website Design</h5>
+                <p className="text-sm font-medium text-caption">Designing immersive websites that seamlessly integrate blockchain
                   technology, providing interactive and engaging experiences.</p>
               </div>
             </label>
             <label className="form-control gap-1-row" htmlFor="metaverse">
               <input type="checkbox" id="metaverse" name="design-needs" value="metaverse" />
               <div className="gap-1-2">
-                <h5 className="subtitle">Brand Integration into Metaverse</h5>
-                <p className="caption">Crafting user-friendly and visually appealing interfaces for blockchain
+                <h5 className="">Brand Integration into Metaverse</h5>
+                <p className="text-sm font-medium text-caption">Crafting user-friendly and visually appealing interfaces for blockchain
                   platforms, wallets, and decentralized applications.</p>
               </div>
             </label>
             <label className="form-control gap-1-row" htmlFor="consulting">
               <input type="checkbox" id="consulting" name="design-needs" value="consulting" />
               <div className="gap-1-2">
-                <h5 className="subtitle">Consultation and Ideation</h5>
-                <p className="caption">Collaborating with you to brainstorm, conceptualize, and refine design
+                <h5 className="">Consultation and Ideation</h5>
+                <p className="text-sm font-medium text-caption">Collaborating with you to brainstorm, conceptualize, and refine design
                   ideas tailored to your specific project.</p>
               </div>
             </label>
           </div>
           <div className="gap-2 flex-start hidden" id="form-content-contact">
-            <p className="caption start">Please provide your name and email so we can reach out to you. It is the
+            <p className="text-sm font-medium text-caption">Please provide your name and email so we can reach out to you. It is the
               first step to bringing your design project to life.</p>
 
             <div className="gap-1 width-full">
@@ -160,55 +163,40 @@ export default function Home() {
       <div className="flex flex-col gap-8 justify-center items-center">
         <h2>Dont trust verify</h2>
         <div className="flex gap-4 items-center jusitfy-center">
-          <div className="flex flex-col gap-6 px-8 py-6 rounded-3xl bg-background">
+          <div className="flex flex-col gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
             <div className="flex gap-2 items-center">
               <Image src={avatar} alt="" />
               <div className="flex flex-col">
-                <p>John Doe</p>
-                <p>Blabla CTO</p>
+                <p className="font-sm text-label font-semibold">John Doe</p>
+                <p className="text-start text-xs font-medium">Blabla CTO</p>
               </div>
             </div>
-            <div className="text-start">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</div>
+            <p className="text-start text-sm font-medium text-caption">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
           </div>
-          <div className="flex flex-col gap-6 px-8 py-6 rounded-3xl bg-background">
+          <div className="flex flex-col gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
             <div className="flex gap-2 items-center">
               <Image src={avatar} alt="" />
               <div className="flex flex-col">
-                <p>John Doe</p>
-                <p>Blabla CTO</p>
+                <p className="font-sm text-label font-semibold">John Doe</p>
+                <p className="text-start text-xs font-medium">Blabla CTO</p>
               </div>
             </div>
-            <div className="text-start">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</div>
+            <p className="text-start text-sm font-medium text-caption">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
           </div>
-          <div className="flex flex-col gap-6 px-8 py-6 rounded-3xl bg-background">
+          <div className="flex flex-col gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
             <div className="flex gap-2 items-center">
               <Image src={avatar} alt="" />
               <div className="flex flex-col">
-                <p>John Doe</p>
-                <p>Blabla CTO</p>
+                <p className="font-sm text-label font-semibold">John Doe</p>
+                <p className="text-start text-xs font-medium">Blabla CTO</p>
               </div>
             </div>
-            <div className="text-start">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</div>
+            <p className="text-start text-sm font-medium text-caption">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
           </div>
         </div>
       </div>
 
-      <div className="flex gap-16 justify-center items-center">
-        <div className="flex flex-col grow gap-4">
-          <h2>Contact us</h2>
-          <p>It is always easier to introduce your project from your own voice. Thus, you can directly book a free 30min intro call with our team by clicking on the button or scanning the QR code.</p>
-        </div>
-        <div className="flex grow gap-6 py-16 p-8 bg-background rounded-3xl">
-          <div className="flex justify-center items-center p-6">
-            <Image src={qrcode} alt="" />
-          </div>
-          <div className="flex flex-col gap-6">
-            <h3>Your intro call</h3>
-            <p>It is always easier to introduce your project from your own voice.</p>
-            <Button text="Book your call" target="_blank" />
-          </div>
-        </div>
-      </div>
+      <CtaContact />
     </>
   );
 }

@@ -24,6 +24,7 @@ const config: Config = {
       },
       boxShadow: {
         'whitepers': '0px 0px 16px 0px rgba(255, 255, 255, 0.15)',
+        'innerwhole': '0px 0px 16px 0px rgba(0, 0, 0, 0.40) inset',
       },
     },
   },
