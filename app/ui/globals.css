@@ -24,8 +24,15 @@ body {
 
 .noise {
   background-image: url(../../public/noise.svg);
+  background-blend-mode: screen;
   
 }
+
+/* .noise-mobile {
+  background-image: url(../../public/noise-mobile.svg);
+  background-blend-mode: screen;
+  
+} */
 
 h1 {
   font-family: "Clash Display Variable";
@@ -127,5 +134,10 @@ h5 {
 
   h5 {
     font-size: 0.875rem;
+  }
+
+  .noise {
+    background-image: url(../../public/noise-mobile.svg);
+    
   }
 }
