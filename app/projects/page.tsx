@@ -14,7 +14,7 @@ export default function Page() {
           <h2>Our Work</h2>
           <p className="text-sm text-center lg:text-start font-medium text-caption">It is always easier to introduce your project from your own voice. Thus, you can directly book a free 30min intro call with our team by clicking on the button or scanning the QR code.</p>
         </div>
-        <div><Image src={computer} alt="" /></div>
+        <div><Image priority src={computer} alt="" /></div>
       </div>
 
       <div className="flex flex-col gap-8 justify-center items-center">
@@ -113,7 +113,7 @@ export default function Page() {
       </div>
 
       <Partners />
-      
+
       <ContactForm />
       </>
     );
