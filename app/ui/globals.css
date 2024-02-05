@@ -94,25 +94,8 @@ h5 {
   left: 0;
 }
 
-/* .light-left {
-  background-image: url(../../public/light-left.png);
-  background-clip: border-box;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: -7rem;
-}
-
-.light-bottom {
-  background-image: url(../../public/light-bottom.png);
-  background-clip: border-box;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: -7rem;
-} */
-
 .light {
   background-image: url(../../public/light.png);
-  /* background-clip: border-box; */
   background-repeat: no-repeat;
   background-position-x: -5rem;
   background-position-y: 4rem;
@@ -139,7 +122,7 @@ h5 {
   }
 
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   h5 {

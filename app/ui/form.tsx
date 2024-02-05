@@ -1,22 +1,17 @@
-import Image from "next/image";
-import CtaContact from "../ui/ctacontact";
-import Button from "../ui/button";
+import Button from "./button"
 
-export default function Page() {
+export default function ContactForm() {
     return(
-      <>
-      <CtaContact />
-
-      <div className="light flex flex-col gap-6 py-16 p-40 bg-background overflow-y-b-clip rounded-3xl justify-center items-center border border-transparentbg shadow-innerwhole">
+        <div className="light flex flex-col gap-6 py-16 px-4 md:px-20 lg:px-40 justify-center items-center overflow-y-b-clip rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
 
         <div className="flex flex-col gap-4 justify-center items-center">
-          <h2>What are your design needs?</h2>
+          <h2 className="text-center">What are your design needs?</h2>
           <p className="text-sm font-medium text-center text-caption">Our aim is to understand your unique vision and goals, and tailor our design services to suit your needs in the ever-evolving landscape of Web3 and blockchain technology.</p>
         </div>
 
         <form className="flex flex-col gap-2 bg-bodybg/[64%] backdrop-blur-md shadow-xl border border-transparentbg rounded-3xl gap-6 px-8 py-6" id="dynamic-form">
           <div className="flex pb-4 border-b border-transparentbg">
-          <h4>Your Wish List</h4>
+            <h4>Your Wish List</h4>
           </div>
           <div className="gap-2 flex-start" id="form-content-needs">
             <label className="form-control gap-1-row" htmlFor="branding">
@@ -113,6 +108,5 @@ export default function Page() {
           </div>
         </form>
       </div>
-      </>
     );
-  }
+}
