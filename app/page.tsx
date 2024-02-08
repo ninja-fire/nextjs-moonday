@@ -7,7 +7,7 @@ import FolioCard from "./ui/folioCard";
 import gradient from '../public/gradient.png';
 import CtaContact from "./ui/ctacontact";
 import Testimonials from "./ui/testimonials";
-import ContactForm from "./ui/form";
+import Wishlist from "./ui/wishlist";
 
 
 export default function Home() {
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </div>
 
-      <ContactForm />
+      <Wishlist />
 
       <Testimonials />
       
