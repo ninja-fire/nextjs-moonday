@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const services = [
     {
         title: "Branding and Identity Design",
@@ -36,12 +38,38 @@ const services = [
 
 
 export default function FormInputs() {
+
+    const [isChecked, setIsChecked] = useState(false);
+    const [serviceList, setServiceList] = useState([]);
+    const serviceChecked:any = [];
+
     return (
         <>
             {services.map((service) => {
+
+                const onCheck = () => {}
+
+                const onChange = () => {
+                    setIsChecked(!isChecked);
+                    console.log(isChecked);
+            
+                    if(isChecked) {
+                        serviceChecked.pop((service.title));
+                        console.log({serviceChecked});
+                    }
+                }
+
                 return (
-                    <label className="group flex gap-3 items-start hover:cursor-pointer" htmlFor={service.tag} key={service.tag}>
-                        <input className="appearance-none w-8 max-w-4 md:w-14 h-4 max-h-4 bg-transparentbg bg-cover checked:bg-gradientimg checked:borber-4 checked:border-label border border-transparentbg group-hover:border-placeholder rounded-sm" type="checkbox" id={service.tag} name="design-needs" value={service.tag} />
+                    <label className="group flex gap-3 items-start hover:cursor-pointer" 
+                    htmlFor={service.tag} key={service.tag}>
+                        <input className="appearance-none w-8 max-w-4 md:w-14 h-4 max-h-4 bg-transparentbg bg-cover checked:bg-gradientimg checked:borber-4 checked:border-label border border-transparentbg group-hover:border-placeholder rounded-sm" 
+                        type="checkbox" 
+                        id={service.tag} 
+                        name="design-needs" 
+                        value={service.tag}
+                        // checked={onCheck}
+                        // onChange={onChange}
+                         />
                             <div className="flex flex-col gap-1 opacity-90 group-hover:opacity-100">
                                 <h5 className="">{service.title}</h5>
                                 <p className="text-xs md:text-sm font-medium text-caption">{service.description}</p>
