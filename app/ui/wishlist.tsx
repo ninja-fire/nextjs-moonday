@@ -24,17 +24,6 @@ export default function Wishlist() {
   // };
 
   const [formSuccess, setFormSuccess] = useState(false);
-  const [formName, setFormName] = useState("your name");
-  const [formEmail, setFormEmail] = useState("your email");
-  const [formMessage, setFormMessage] = useState("");
-  const [formTelegram, setFormTelegran] = useState("");
-
-  // const initialInputs = {
-  //   surname: "",
-  //   email: "",
-  //   message: "",
-  //   telegram: "",
-  // }
 
   const [inputs, setInputs] = useState({
     surname: "",
@@ -48,13 +37,13 @@ export default function Wishlist() {
   //   setInputs((prevState) => ({ ...prevState, [name]: value }));
   // };
 
-  const handleInputChange = (e:any) => {
-    // let value = e.target.value
-    setInputs(() => ({
-      ...inputs,
-      [e.target.name]: e.target.value,
-    }));
-  }
+  // const handleInputChange = (e:any) => {
+  //   // let value = e.target.value
+  //   setInputs(() => ({
+  //     ...inputs,
+  //     [e.target.name]: e.target.value,
+  //   }));
+  // }
 
   // const handleInputChange = (e:any) => {
     
@@ -66,113 +55,58 @@ export default function Wishlist() {
   //       console.log(inputs);
   //     };
 
-  const handleInput = (e: any) => {
-    const fieldName = e.target.name;
-    const fieldValue = e.target.value;
+  // const handleInput = (e: any) => {
+  //   const fieldName = e.target.name;
+  //   const fieldValue = e.target.value;
 
-    console.log(fieldValue);
+  //   console.log(fieldValue);
 
-    setInputs((prevFormData) => ({
-      ...prevFormData,
-      [fieldName]: fieldValue,
-    }))
-  }
+  //   setInputs((prevFormData) => ({
+  //     ...prevFormData,
+  //     [fieldName]: fieldValue,
+  //   }))
+  // }
 
   const submitForm = (e: any) => {
     // We don't want the page to refresh
-    // e.preventDefault()
+    e.preventDefault()
 
-    // const formURL = e.target.action
-    // const data = new FormData()
+    const formURL = e.target.action
+    const data = new FormData()
 
-    // // Turn our formData state into data we can use with a form submission
-    // Object.entries(formData).forEach(([key, value]) => {
-    //   data.append(key, value);
-    // })
+    // Turn our formData state into data we can use with a form submission
+    Object.entries(inputs).forEach(([key, value]) => {
+      data.append(key, value);
+    })
 
-    // // POST the data to the URL of the form
-    // fetch(formURL, {
-    //   method: "POST",
-    //   body: data,
-    //   headers: {
-    //     'accept': 'application/json',
-    //   },
-    // }).then(() => {
-    //   setFormData({
-    //     name: "",
-    //     email: "",
-    //     message: "",
-    //     telegram: ""
-    //   })
-    //   setFormSuccess(true);
-    // })
+    // POST the data to the URL of the form
+    fetch(formURL, {
+      method: "POST",
+      body: data,
+      headers: {
+        'accept': 'application/json',
+      },
+    }).then(() => {
+      setInputs({
+        surname: "",
+        email: "",
+        message: "",
+        telegram: ""
+      })
+      setFormSuccess(true);
+    })
   }
 
-  // const handleNameChange = (e:any, prevState: any) => {
-  //   const name = e.target.value;
-  //   setFormName(prevState + name);
-  // }
-
-  // const handleEmailChange = (e:any) => {
-  //   setFormEmail(e.target.value);
-  // }
-
-  // const handleTelegramChange = (e:any) => {
-  //   setFormMessage(e.target.value);
-  // }
-
-  // const handleMessageChange = (e:any) => {
-  //   setFormTelegran(e.target.value);
-  // }
-
-  const wishlistItems = <WishlistItems />;
-
-  const contactForm =
-    <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-2">
-        <label className="text-sm font-semibold text-label" htmlFor="surname">Your name</label>
-        <input className="appearance-none forced-colors:appearance-auto flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
-        type="text" name="surname" id="surname" placeholder="your name"  value={inputs.surname}
-        onChange={e => {
-          setInputs({
-            ...inputs,
-            surname: e.target.value
-          });
-        }}/>
-      </div>
-      <div className="flex flex-col gap-2">
-        <label className="text-sm font-semibold text-label" htmlFor="email">Your email</label>
-        <input className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
-        type="email" name="email" id="email" placeholder="Enter your email"onChange={e => {
-          setFormEmail(e.target.value)}} value={formEmail} />
-      </div>
-      <div className="flex flex-col gap-2">
-        <label className="text-sm font-semibold text-label" htmlFor="telegram">Your telegram handle</label>
-        <input className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
-        type="text" name="telegram" id="telegram" placeholder="telegram handle" onChange={handleInputChange} value={inputs.telegram} />
-      </div>
-      <div className="flex flex-col gap-2">
-        <label className="text-sm font-semibold text-label" htmlFor="message">Describe your needs</label>
-        <textarea className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
-        name="message" id="message" onChange={handleInputChange} value={inputs.message}></textarea>
-      </div>
-    </div>
-
   const [title, setTitle] = useState("Your Wish List");
-  const [content, setContent] = useState(wishlistItems);
   const [step, setStep] = useState(0);
 
   function handleNext() {
     setTitle("Contact Details");
-    setContent(contactForm);
-
     setStep(1);
   }
 
   function handleBack() {
     setTitle("Your Wish List");
-    setContent(wishlistItems);
-
     setStep(0);
   }
 
@@ -195,7 +129,36 @@ export default function Wishlist() {
               <h4>{title}</h4>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto flex-start gap-6 h-full py-8">
-              {content}
+              {step === 1 ?
+              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-semibold text-label" htmlFor="surname">Your name</label>
+                <input className="appearance-none forced-colors:appearance-auto flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
+                type="text" name="surname" id="surname" placeholder="John Doe"  value={inputs.surname} onChange={e => {setInputs({...inputs, surname: e.target.value});}} />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-semibold text-label" htmlFor="email">Your email</label>
+                <input className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
+                type="email" name="email" id="email" placeholder="johndoe@mail.com" value={inputs.email} onChange={e => {setInputs({...inputs, email: e.target.value});}} />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-semibold text-label" htmlFor="telegram">Your telegram handle</label>
+                <input className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
+                type="text" name="telegram" id="telegram" placeholder="@johndoe" value={inputs.telegram} onChange={e => {setInputs({...inputs, telegram: e.target.value});}} />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-semibold text-label" htmlFor="message">Describe your needs</label>
+                <textarea className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
+                name="message" id="message" value={inputs.message} onChange={e => {setInputs({...inputs, message: e.target.value});}}></textarea>
+              </div>
+            </div>
+            :
+            <WishlistItems />
+
+
+              }
+
+              {/* {content} */}
             </div>
 
             <div className="flex flex-col md:flex-row gap-2 md:gap-4 w-full">
