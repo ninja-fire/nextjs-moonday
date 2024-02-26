@@ -38,26 +38,15 @@ const services = [
 
 
 export default function FormInputs() {
-
     const [isChecked, setIsChecked] = useState(false);
-    const [serviceList, setServiceList] = useState([]);
-    const serviceChecked:any = [];
+
+    const handleOnChange = () => {
+        setIsChecked(!isChecked);
+      };
 
     return (
         <>
             {services.map((service) => {
-
-                const onCheck = () => {}
-
-                const onChange = () => {
-                    setIsChecked(!isChecked);
-                    console.log(isChecked);
-            
-                    if(isChecked) {
-                        serviceChecked.pop((service.title));
-                        console.log({serviceChecked});
-                    }
-                }
 
                 return (
                     <label className="group flex gap-3 items-start hover:cursor-pointer" 
@@ -67,8 +56,8 @@ export default function FormInputs() {
                         id={service.tag} 
                         name="design-needs" 
                         value={service.tag}
-                        // checked={onCheck}
-                        // onChange={onChange}
+                        checked={isChecked}
+                        onChange={handleOnChange}
                          />
                             <div className="flex flex-col gap-1 opacity-90 group-hover:opacity-100">
                                 <h5 className="">{service.title}</h5>
