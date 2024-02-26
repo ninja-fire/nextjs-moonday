@@ -9,7 +9,6 @@ import Image from "next/image";
 import gradient from "../../public/gradient.png";
 import planet from "../../public/planet.png";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function Wishlist() {
 
