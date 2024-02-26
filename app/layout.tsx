@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className= {`${fontclash.className} antialiased`}>
       <main className="flex min-h-screen">
-        <nav className="min-w-fit h-screen sticky top-0 group flex flex-col overflow-y-b-clip justify-between items-center hover:items-start px-1 md:px-4 py-6 gap-4 transition-all">
+        <nav className="group flex flex-col relative min-w-fit h-screen sticky top-0 overflow-y-b-clip justify-between items-center hover:items-start px-1 md:px-4 py-6 gap-4 transition-all">
         <Image priority={false} src={gradient} alt="" width={1080} height={1080} className="absolute h-full left-32 blur-3xl -z-1"/>
         <SideNav />
       </nav>
