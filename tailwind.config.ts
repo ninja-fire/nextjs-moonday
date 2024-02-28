@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradientimg": "url('../../public/gradient.png')",
+        "gradientimg": "url('../../public/gradient.webp')",
       },
       colors: {
         'background': '#141414',

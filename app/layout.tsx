@@ -5,7 +5,7 @@ import { fontclash } from "./ui/font";
 import SideNav from './ui/sidenav';
 import Footer from './ui/footer';
 import Image from 'next/image';
-import gradient from '../public/gradient.png';
+import gradient from '../public/gradient.webp';
 
 const inter = Inter({ subsets: ["latin"] });
 

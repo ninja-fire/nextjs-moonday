@@ -1,6 +1,5 @@
 import Image from "next/image";
 import avatar from '../../public/avatar.png';
-import lightLeft from '../../public/light-left.png'
 
 
 export default function Testimonials() {

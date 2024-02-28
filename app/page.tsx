@@ -4,10 +4,11 @@ import logoipsum from "../public/Logoipsum.svg";
 import projectsicon from '../public/icons/projects.svg';
 import Hero from "./ui/hero";
 import FolioCard from "./ui/folioCard";
-import gradient from '../public/gradient.png';
+import gradient from '../public/gradient.webp';
 import CtaContact from "./ui/ctacontact";
 import Testimonials from "./ui/testimonials";
 import Wishlist from "./ui/wishlist";
+import Portfolio from "./ui/portfolio";
 
 
 export default function Home() {
@@ -52,6 +53,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <Portfolio />
 
       <Wishlist />
 

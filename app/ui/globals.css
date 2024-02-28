@@ -95,7 +95,7 @@ h5 {
 }
 
 .buttonBG {
-  background-image: url(../../public/gradient.png);
+  background-image: url(../../public/gradient.webp);
   background-clip: border-box;
   background-position: center;
   background-repeat: no-repeat;
@@ -111,14 +111,14 @@ h5 {
   left: 0;
 }
 
-.light {
+/* .light {
   background-image: url(../../public/light.png);
   background-repeat: no-repeat;
   background-position-x: -5rem;
   background-position-y: 4rem;
   background-size: cover;
 
-}
+} */
 
 .inline {
   inline-size: max-content;
