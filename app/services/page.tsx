@@ -6,7 +6,7 @@ import Button from "../ui/button";
 import CtaContact from "../ui/ctacontact";
 import partners from "../../public/partners.png";
 import Link from "next/link";
-import ContactForm from "../ui/form";
+import ContactForm from "../ui/wishlist";
 import Partners from "../ui/partners";
 
 export default function Page() {

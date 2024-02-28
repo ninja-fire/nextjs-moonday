@@ -56,7 +56,7 @@ export default function NavLinks() {
             alt=''
             className="opacity-80 group-hover/{icon}:opacity-100"
             />
-            <p className="transition-all hidden group-hover:block">{link.name}</p>
+            <p className="transition-all hidden sm:block">{link.name}</p>
           </Link>
         );
       })}

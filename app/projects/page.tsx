@@ -3,7 +3,7 @@ import computer from '../../public/computer.png';
 import Link from "next/link";
 import arrow from '../../public/icons/arrow.svg';
 import partners from "../../public/partners.png";
-import ContactForm from "../ui/form";
+import ContactForm from "../ui/wishlist";
 import Partners from "../ui/partners";
 
 export default function Page() {
