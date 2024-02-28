@@ -145,9 +145,11 @@ h5 {
   h5 {
     font-size: 0.875rem;
   }
+}
+
+@media only screen and (max-width: 640px) {
 
   .noise {
     background-image: url(../../public/noise-mobile.svg);
-    
   }
 }

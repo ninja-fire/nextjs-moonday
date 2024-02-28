@@ -4,7 +4,7 @@ import avatar from '../../public/avatar.png';
 
 export default function Testimonials() {
     return (
-        <div className="flex flex-col gap-8 justify-center items-center">
+        <div className="flex flex-col gap-8 justify-center items-center w-full">
         <h2>Dont trust verify</h2>
         <div className="flex flex-wrap md:flex-nowrap gap-4 items-center w-full justify-center">
           <div className="flex flex-col grow max-w-80 md:max-w-full gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">

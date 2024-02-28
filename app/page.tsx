@@ -1,10 +1,7 @@
 import Image from "next/image";
-import Button from "../app/ui/button";
 import logoipsum from "../public/Logoipsum.svg";
-import projectsicon from '../public/icons/projects.svg';
 import Hero from "./ui/hero";
 import FolioCard from "./ui/folioCard";
-import gradient from '../public/gradient.webp';
 import CtaContact from "./ui/ctacontact";
 import Testimonials from "./ui/testimonials";
 import Wishlist from "./ui/wishlist";
@@ -27,7 +24,7 @@ export default function Home() {
         <div className="contents justify-center items-center py-8"><Image src={logoipsum} alt="" width={169} height={40} className="scale-50 md:scale-75 ld:scale-90" /></div>
       </div>
 
-      <div className="flex flex-col gap-6 justify-center items-center">
+      {/* <div className="flex flex-col gap-6 justify-center items-center">
         <h2 className="text-center">Why you should work with us</h2>
         <div className="flex gap-4 justify-center items-center flex-wrap">
           <div className="flex flex-col gap-4 p-8 rounded-3xl bg-transparentbg border border-transparentbg max-w-sm">
@@ -52,7 +49,7 @@ export default function Home() {
             <p className="text-sm font-medium text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Portfolio />
 

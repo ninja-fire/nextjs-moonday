@@ -6,7 +6,7 @@ import WishlistItems from "./wishlist-items";
 import ContactForm from "./contact-form";
 import { useState } from "react";
 import Image from "next/image";
-import gradient from "../../public/gradient.png";
+import gradient from "../../public/gradient.webp";
 import planet from "../../public/planet.png";
 import Link from "next/link";
 
@@ -64,11 +64,9 @@ export default function Wishlist() {
   }
 
   return (
-
-    <div className="relative flex flex-col gap-6 py-16 px-2 md:px-20 lg:px-40 justify-center items-center overflow-y-b-clip overflow-hidden rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-      <Image priority={false} src={gradient} alt="" width={1080} height={1080} className="flex absolute max-w-[64px] h-full -left-16 blur-2xl -z-1" />
-
-
+    <div className="flex flex-col">
+          <div className="relative flex flex-col gap-6 py-16 px-2 md:px-20 lg:px-40 justify-center items-center rounded-3xl bg-background overflow-hidden border border-transparentbg shadow-innerwhole">
+      <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="flex absolute max-w-[64px] h-full scale-y-[160%] -left-16 blur-2xl -z-1" />
       <div className="flex flex-col gap-4 justify-center items-center">
         <h2 className="text-center">What are your design needs?</h2>
         <p className="text-sm font-medium text-center text-caption md:max-w-[80%]">Our aim is to understand your unique vision and goals, and tailor our design services to suit your needs in the ever-evolving landscape of Web3 and blockchain technology.</p>
@@ -154,6 +152,7 @@ export default function Wishlist() {
         }
 
       </form>
+    </div>
     </div>
   );
 }

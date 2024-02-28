@@ -21,18 +21,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className= {`${fontclash.className} antialiased`}>
-      <main className="flex min-h-screen">
-        <nav className="min-w-fit h-screen sticky top-0 group flex flex-col overflow-y-b-clip justify-between items-center hover:items-start px-1 md:px-4 py-6 gap-4 transition-all">
-        <Image priority={false} src={gradient} alt="" width={1080} height={1080} className="flex absolute h-screen align-right blur-2xl -z-1"/>
-        <SideNav />
-      </nav>
-      <div className="noise shadow-xl flex flex-col grow justify-center items-center px-3 md:px-16 2xl:px-40 pb-4 sm:pb-16 pt-40 gap-40 overflow-hidden z-10 rounded-l-[32px] bg-bodybg border border-label/[.08] md:overflow-y-auto">{children}</div>
-      </main>
-      <footer className="flex flex-col justify-center items-start gap-8 bg-background py-20 px-20 md:px-40">
-        <Footer />
-      </footer>
-    </body>
+      <body className={`${fontclash.className} antialiased`}>
+        <main className="flex min-h-screen">
+          <nav className="group flex flex-col min-w-fit h-screen overflow-y-b-visible justify-between items-center px-1 md:px-4 py-6 gap-4 transition-all">
+            <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="flex absolute h-screen left-24 w-[64vw] md:left-40 blur-2xl z-[-10]" />
+            <SideNav />
+          </nav>
+          <div className="noise flex flex-col grow items-center px-3 md:px-16 2xl:px-40 pb-4 sm:pb-16 pt-40 gap-40 bg-scroll h-screen z-10 rounded-l-[32px] bg-bodybg border border-label/[.08] overflow-y-auto overflow-x-hidden md:overflow-y-auto shadow-xl">{children}</div>
+        </main>
+        <footer className="relative flex flex-col justify-center items-start gap-8 bg-background py-20 px-20 md:px-40 z-[-20]">
+          <Footer />
+        </footer>
+      </body>
     </html>
   );
 }

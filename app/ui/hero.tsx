@@ -8,12 +8,12 @@ export default function Hero() {
         <div className="flex flex-col gap-16 justify-center items-center h-[48vh]">
         <div className="flex flex-col gap-6 justify-center items-center">
           <div className="flex flex-col gap-2 justify-center items-center">
-            <div className="flex gap-1 md:gap-3 justify-center items-center flex-wrap text-center">
+            <div className="flex gap-0 md:gap-3 justify-center items-center flex-wrap text-center">
             <h1>We design</h1>
             <Image src={moon} alt="" className="scale-75 md:scale-100"/>
             <h1>your</h1>
             </div>
-            <div className="flex gap-1 md:gap-3 justify-center items-center flex-wrap text-center">
+            <div className="flex gap-0 md:gap-3 justify-center items-center flex-wrap text-center">
             <h1>brand & dapp</h1>
             <Image src={sun} alt="" className="scale-75 md:scale-100"/>
             <h1>faster</h1>
