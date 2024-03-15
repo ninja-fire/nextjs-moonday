@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoipsum from "../public/Logoipsum.svg";
 import Hero from "./ui/hero";
 import FolioCard from "./ui/folioCard";
+import ServicesList from "./ui/serviceslist";
 import CtaContact from "./ui/ctacontact";
 import Testimonials from "./ui/testimonials";
 import Wishlist from "./ui/wishlist";
@@ -68,6 +68,8 @@ export default function Home() {
       </div> */}
 
       <Portfolio />
+
+      <ServicesList />
 
       <Wishlist />
 

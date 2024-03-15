@@ -15,7 +15,7 @@ export default function Testimonials() {
                 <p className="text-start text-xs font-medium">Blabla CTO</p>
               </div>
             </div>
-            <p className="text-start text-sm font-medium text-caption">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
+            <p className="text-start text-sm font-medium text-caption leading-6">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
           </div>
           <div className="flex flex-col grow max-w-80 md:max-w-full gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
             <div className="flex gap-2 items-center">
@@ -25,7 +25,7 @@ export default function Testimonials() {
                 <p className="text-start text-xs font-medium">Blabla CTO</p>
               </div>
             </div>
-            <p className="text-start text-sm font-medium text-caption">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
+            <p className="text-start text-sm font-medium text-caption leading-6">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
           </div>
           <div className="flex flex-col grow max-w-80 md:max-w-full gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
             <div className="flex gap-2 items-center">
@@ -35,7 +35,7 @@ export default function Testimonials() {
                 <p className="text-start text-xs font-medium">Blabla CTO</p>
               </div>
             </div>
-            <p className="text-start text-sm font-medium text-caption">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
+            <p className="text-start text-sm font-medium text-caption leading-6">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
           </div>
         </div>
       </div>

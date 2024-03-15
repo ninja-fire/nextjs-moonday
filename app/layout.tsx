@@ -29,7 +29,7 @@ export default function RootLayout({
           </nav>
           <div className="noise flex flex-col grow items-center px-3 md:px-16 2xl:px-40 pb-4 sm:pb-16 pt-40 gap-40 bg-scroll h-screen z-10 rounded-l-[32px] bg-bodybg border border-label/[.08] overflow-y-auto overflow-x-hidden md:overflow-y-auto shadow-xl">{children}</div>
         </main>
-        <footer className="relative flex flex-col justify-center items-start gap-8 bg-background py-20 px-20 md:px-40 z-[-20]">
+        <footer className="relative flex flex-col justify-center items-start gap-8 py-20 px-20 md:px-40">
           <Footer />
         </footer>
       </body>

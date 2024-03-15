@@ -11,9 +11,9 @@ export default function LooterFolio () {
     return(
         <div className="flex flex-col gap-8 w-full">
                 <div className="flex flex-col gap-4 justify-center max-w-screen-sm">
-                    <p className='text-md font-semibold bg-clip-text text-transparent bg-gradient-to-r from-lime-200 to-lime-500'>Unleash the power of first impressions</p>
+                    <p className='text-md font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500'>Unleash the power of first impressions</p>
                     <h2>All you need for your launch</h2>
-                    <p className="text-sm font-medium text-caption">Step into the arena armed with the ultimate launch toolkit. Our battle-tested landing pages are designed to maximize conversions and pump your project to the moon. From captivating designs to strategic UX, we've got you covered.</p>
+                    <p className="text-sm font-medium text-caption leading-6">Step into the arena armed with the ultimate launch toolkit. Our battle-tested landing pages are designed to maximize conversions and pump your project to the moon. From captivating designs to strategic UX, we've got you covered.</p>
                     <div className="flex gap-2 w-full flex-wrap">
                         <div className="flex px-4 py-2 rounded-xl bg-transparentbg border border-transparentbg shadow-lg backdrop-blur-[1px]">
                             <span className="text-start text-sm font-medium text-label">Branding</span>
