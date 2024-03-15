@@ -123,7 +123,7 @@ export default function Wishlist() {
               {(step === 0) ?
                 <div className="flex grow">
                   <button type="button" onClick={handleNext} className="flex grow buttonBG transition justify-center items-center p-0.5 rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
-                    <div className="flex transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold">
+                    <div className="flex bgeffect transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold">
                       <span className="inline">Validate my wishlist</span>
                     </div>
                   </button>
@@ -139,7 +139,7 @@ export default function Wishlist() {
 
                   <div className="flex grow">
                     <button type="submit" className="flex grow buttonBG transition-all justify-center items-center p-0.5 rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
-                      <div className="flex transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold">
+                      <div className="flex bgeffect transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold">
                         <span className="inline">Send my request</span>
                       </div>
                     </button>

@@ -41,7 +41,11 @@ body {
 .noise {
   background-image: url(../../public/noise.svg);
   background-blend-mode: screen;
-  
+}
+
+.bgeffect {
+  background-image: url(../../public/bgeffect.png);
+  background-blend-mode: screen;
 }
 
 h1 {

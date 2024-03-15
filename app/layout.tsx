@@ -27,7 +27,7 @@ export default function RootLayout({
             <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="flex absolute h-screen left-24 w-[64vw] md:left-40 blur-2xl z-[-10]" />
             <SideNav />
           </nav>
-          <div className="noise flex flex-col grow items-center px-3 md:px-16 2xl:px-40 pb-4 sm:pb-16 pt-40 gap-40 bg-scroll h-screen z-10 rounded-l-[32px] bg-bodybg border border-label/[.08] overflow-y-auto overflow-x-hidden md:overflow-y-auto shadow-xl">{children}</div>
+          <div className="bgeffect flex flex-col grow items-center px-3 md:px-16 2xl:px-40 pb-4 sm:pb-16 pt-40 gap-40 bg-scroll h-screen z-10 rounded-l-[32px] bg-bodybg border border-label/[.08] overflow-y-auto overflow-x-hidden md:overflow-y-auto shadow-xl">{children}</div>
         </main>
         <footer className="relative flex flex-col justify-center items-start gap-8 py-20 px-20 md:px-40">
           <Footer />
