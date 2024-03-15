@@ -61,7 +61,7 @@ export default function FormInputs() {
                          />
                             <div className="flex flex-col gap-1 opacity-90 group-hover:opacity-100">
                                 <h5 className="">{service.title}</h5>
-                                <p className="text-xs md:text-sm font-medium text-caption">{service.description}</p>
+                                <p className="text-xs md:text-sm font-medium text-caption leading-6">{service.description}</p>
                             </div>
                     </label>
                 );

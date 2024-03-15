@@ -11,9 +11,9 @@ export default function CoinFolio () {
     return(
         <div className="flex flex-col gap-8 w-full">
                 <div className="flex flex-col gap-4 justify-center max-w-screen-sm">
-                    <p className='text-md font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500'>A tailored landing page that converts</p>
+                    <p className='text-md font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500'>Enhancing Brand Engagement</p>
                     <h2>Reinforce your brand and community</h2>
-                    <p className="text-sm font-medium text-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
+                    <p className="text-sm font-medium text-caption leading-6">Unleash the full potential of your brand's identity with our transformative design strategies. From revitalizing your visual identity to crafting engaging social media experiences, we'll help you forge a path that leads to unparalleled brand success.</p>
                     <div className="flex gap-2 w-full flex-wrap">
                         <div className="flex px-4 py-2 rounded-xl bg-transparentbg border border-transparentbg shadow-lg backdrop-blur-[1px]">
                             <span className="text-start text-sm font-medium text-label">Rebranding</span>

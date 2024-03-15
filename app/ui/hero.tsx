@@ -19,7 +19,7 @@ export default function Hero() {
             <h1>faster</h1>
             </div>
           </div>
-          <p className="text-sm font-medium text-center text-caption">We are a web3 design studio building impactful brands and super easy to use Dapps to help launch great ideas faster.</p>
+          <p className="text-sm font-medium text-center text-caption leading-6">We are a web3 design studio building impactful brands and super easy to use Dapps to help launch great ideas faster.</p>
         </div>
         <div className="flex m-w-60">
         <Button text="Press to Chat" target="_blank" />
