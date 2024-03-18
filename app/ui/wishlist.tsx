@@ -9,6 +9,7 @@ import Image from "next/image";
 import gradient from "../../public/gradient.png";
 import planet from "../../public/planet.png";
 import Link from "next/link";
+import { log } from "console";
 
 export default function Wishlist() {
 
@@ -23,6 +24,21 @@ export default function Wishlist() {
     telegram: "",
   });
 
+  const [wishlistValues, setWishlistValues] = useState<string[]>([]);
+
+  const handleWishlistChange = (value: string) => {
+    if(wishlistValues.includes(value)){
+        const updatedValues = wishlistValues.filter(v => v != value);
+        setWishlistValues(updatedValues);
+    } else {
+      setWishlistValues([
+          ...wishlistValues,
+          value
+      ]);
+    }
+  };
+
+    
   function handleNext() {
     setTitle("Contact Details");
     setStep(1);
@@ -44,6 +60,7 @@ export default function Wishlist() {
     Object.entries(inputs).forEach(([key, value]) => {
       data.append(key, value);
     })
+    data.append("wishlist", JSON.stringify(wishlistValues));
 
     // POST the data to the URL of the form
     fetch(formURL, {
@@ -51,6 +68,7 @@ export default function Wishlist() {
       body: data,
       headers: {
         'accept': 'application/json',
+        'Content-Type': 'application/json',
       },
     }).then(() => {
       setInputs({
@@ -74,7 +92,7 @@ export default function Wishlist() {
         <p className="text-sm font-medium text-center text-caption md:max-w-[80%]">Our aim is to understand your unique vision and goals, and tailor our design services to suit your needs in the ever-evolving landscape of Web3 and blockchain technology.</p>
       </div>
 
-      <form method="POST" action="" onSubmit={submitForm} className="flex flex-col justify-between px-4 md:px-8 py-6 max-w-screen-sm min-w-[80%] min-h-[64vh] max-h-[64vh] md:max-h-none bg-bodybg/[64%] backdrop-blur-md shadow-xl border border-transparentbg rounded-2xl" >
+      <form method="POST" action="/api" onSubmit={submitForm} className="flex flex-col justify-between px-4 md:px-8 py-6 max-w-screen-sm min-w-[80%] min-h-[64vh] max-h-[64vh] md:max-h-none bg-bodybg/[64%] backdrop-blur-md shadow-xl border border-transparentbg rounded-2xl" >
         {formSuccess ?
           <div className="flex flex-col h-full gap-8 items-center justify-center">
             <h4 className="text-center">Your request has been submitted!</h4>
@@ -116,7 +134,12 @@ export default function Wishlist() {
                   </div>
                 </div>
                 :
-                <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto overflow-scroll flex-start gap-6 h-full py-8"><WishlistItems /></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto overflow-scroll flex-start gap-6 h-full py-8">
+                  <WishlistItems
+                    values={wishlistValues}
+                    onUpdate={handleWishlistChange}
+                  />
+                  </div>
                 
               }
             </div>

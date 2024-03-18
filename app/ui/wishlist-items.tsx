@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const services = [
     {
         title: "Branding and Identity Design",
@@ -36,24 +34,11 @@ const services = [
     },
 ];
 
-
-export default function FormInputs() {
-    const [checkedValues, setCheckedValues] = useState<string[]>([]);
-
-    const handleOnChange = (e: any) => {
-        const value = e.target.value;
-        console.log(value);
-        if(checkedValues.includes(value)){
-            const updatedValues = checkedValues.filter(v => v != value);
-            setCheckedValues(updatedValues);
-        } else {
-            setCheckedValues([
-                ...checkedValues,
-                value
-            ]);
-        }
-      };
-
+interface Props {
+    values: string[]
+    onUpdate: (value: string) => void
+}
+export default function FormInputs({values, onUpdate}: Props) {
 
     return (
         <>
@@ -67,8 +52,8 @@ export default function FormInputs() {
                         id={service.tag} 
                         name="design-needs" 
                         value={service.tag}
-                        checked={checkedValues.includes(service.tag)}
-                        onChange={handleOnChange}
+                        checked={values.includes(service.tag)}
+                        onChange={(e) => onUpdate(e.target.value)}
                          />
                             <div className="flex flex-col gap-1 opacity-90 group-hover:opacity-100">
                                 <h5 className="">{service.title}</h5>
