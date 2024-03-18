@@ -2,7 +2,7 @@ import Image from "next/image";
 import Button from "./button";
 import qrcode from '../../public/qrcode.svg';
 import Link from "next/link";
-
+import gradient from '../../public/gradient.webp';
 
 export default function CtaContact() {
   return (
@@ -11,7 +11,8 @@ export default function CtaContact() {
         <h2>Contact us</h2>
         <p className="text-sm text-center lg:text-start font-medium text-caption leading-6">It is always easier to introduce your project from your own voice. Thus, you can directly book a free 30min intro call with our team by clicking on the button or scanning the QR code.</p>
       </div>
-      <div className="flex grow flex-wrap lg:flex-nowrap gap-12 p-8 justify-center lg:justify-start items-center rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
+      <div className="flex relative overflow-hidden lg:overflow-visible grow flex-col lg:flex-row gap-12 p-8 justify-center lg:justify-start items-center rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
+      <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="absolute lg:hidden -left-12 blur-xl h-[200%] bottom-0 w-[2rem]" />
         <div className="flex grow justify-center items-center p-6 border border-dashed border-transparentbg rounded-2xl">
           <Image src={qrcode} alt="" width={160} height={160} className="max-w-fit" />
         </div>
