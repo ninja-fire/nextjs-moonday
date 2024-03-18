@@ -65,7 +65,7 @@ export default function Wishlist() {
 
   return (
 
-    <div className="relative flex flex-col gap-6 py-16 px-2 md:px-20 lg:px-40 justify-center items-center overflow-y-b-clip overflow-hidden rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
+    <div className="relative flex flex-col gap-6 py-16 pb-2 md:pb-20 px-2 md:px-20 lg:px-40 justify-center items-center overflow-y-b-clip overflow-hidden rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
       <Image priority={false} src={gradient} alt="" width={1080} height={1080} className="flex absolute max-w-[64px] h-full -left-16 blur-2xl -z-1" />
 
 
@@ -74,10 +74,10 @@ export default function Wishlist() {
         <p className="text-sm font-medium text-center text-caption md:max-w-[80%]">Our aim is to understand your unique vision and goals, and tailor our design services to suit your needs in the ever-evolving landscape of Web3 and blockchain technology.</p>
       </div>
 
-      <form method="POST" action="" onSubmit={submitForm} className="flex flex-col justify-between px-4 md:px-8 py-6 max-w-screen-sm min-w-[80%] min-h-[64vh] bg-bodybg/[64%] backdrop-blur-md shadow-xl border border-transparentbg rounded-3xl" >
+      <form method="POST" action="" onSubmit={submitForm} className="flex flex-col justify-between px-4 md:px-8 py-6 max-w-screen-sm min-w-[80%] min-h-[64vh] max-h-[64vh] md:max-h-none bg-bodybg/[64%] backdrop-blur-md shadow-xl border border-transparentbg rounded-2xl" >
         {formSuccess ?
           <div className="flex flex-col h-full gap-8 items-center justify-center">
-            <h4>Your request has been submitted!</h4>
+            <h4 className="text-center">Your request has been submitted!</h4>
             <Image priority src={planet} alt="" width={960} height={960} className="flex w-80" />
             <p className="text-sm font-medium text-center text-caption">Your message has been sent successfully. We'll get back to you as soon as possible. In the meantime, feel free to explore more of our work and services.</p>
             <Link href='/projects' className="flex buttonBG transition justify-center items-center p-0.5 rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
@@ -91,7 +91,7 @@ export default function Wishlist() {
             <div className="flex pb-4 border-b border-transparentbg">
               <h4>{title}</h4>
             </div>
-            <div className="flex flex-start gap-6 w-full">
+            <div className="flex flex-start overflow-hidden gap-6 w-full">
               {step === 1 ?
                 <div className="flex flex-col gap-6 w-full">
                   <div className="flex flex-col gap-2">
@@ -116,7 +116,7 @@ export default function Wishlist() {
                   </div>
                 </div>
                 :
-                <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto flex-start gap-6 h-full py-8"><WishlistItems /></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto overflow-scroll flex-start gap-6 h-full py-8"><WishlistItems /></div>
                 
               }
             </div>
