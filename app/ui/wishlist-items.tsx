@@ -38,11 +38,22 @@ const services = [
 
 
 export default function FormInputs() {
-    const [isChecked, setIsChecked] = useState(false);
+    const [checkedValues, setCheckedValues] = useState<string[]>([]);
 
-    const handleOnChange = () => {
-        setIsChecked(!isChecked);
+    const handleOnChange = (e: any) => {
+        const value = e.target.value;
+        console.log(value);
+        if(checkedValues.includes(value)){
+            const updatedValues = checkedValues.filter(v => v != value);
+            setCheckedValues(updatedValues);
+        } else {
+            setCheckedValues([
+                ...checkedValues,
+                value
+            ]);
+        }
       };
+
 
     return (
         <>
@@ -56,7 +67,7 @@ export default function FormInputs() {
                         id={service.tag} 
                         name="design-needs" 
                         value={service.tag}
-                        checked={isChecked}
+                        checked={checkedValues.includes(service.tag)}
                         onChange={handleOnChange}
                          />
                             <div className="flex flex-col gap-1 opacity-90 group-hover:opacity-100">

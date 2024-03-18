@@ -97,7 +97,7 @@ export default function Wishlist() {
                   <div className="flex flex-col gap-2">
                     <label className="text-sm font-semibold text-label" htmlFor="surname">Your name</label>
                     <input className="appearance-none forced-colors:appearance-auto flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
-                      type="text" name="surname" id="surname" placeholder="John Doe" value={inputs.surname} onChange={e => { setInputs({ ...inputs, surname: e.target.value }); }} />
+                      type="text" name="surname" required id="surname" placeholder="John Doe" value={inputs.surname} onChange={e => { setInputs({ ...inputs, surname: e.target.value }); }} />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-sm font-semibold text-label" htmlFor="email">Your email</label>
