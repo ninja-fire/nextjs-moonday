@@ -52,7 +52,7 @@ export default function Wishlist() {
   const submitForm = (e: any) => {
     // We don't want the page to refresh
     e.preventDefault()
-
+    
     const formURL = e.target.action
     
     // POST the data to the URL of the form
@@ -95,7 +95,7 @@ export default function Wishlist() {
         {formSuccess ?
           <div className="flex flex-col h-full gap-8 items-center justify-center">
             <h4 className="text-center">Your request has been submitted!</h4>
-            <Image priority src={planet} alt="" width={960} height={960} className="flex w-80" />
+            <Image priority={true} src={planet} alt="" width={960} height={960} className="flex w-80" />
             <p className="text-sm font-medium text-center text-caption">Your message has been sent successfully. We'll get back to you as soon as possible. In the meantime, feel free to explore more of our work and services.</p>
             <Link href='/projects' className="flex buttonBG transition justify-center items-center p-0.5 rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
               <div className="flex transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold">
