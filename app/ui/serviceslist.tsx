@@ -23,11 +23,13 @@ export default function ServicesList() {
                             <p className="text-start text-sm font-medium text-placeholder">Starts at</p>
                             <p className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500">800$</p>
                         </div>
-                        {/* <Image src={arrow} alt="" /> */}
+                        <Link target="_blank" href="https://t.me/moondaydesign?text=example">
+                            <Image src={arrow} alt="" className="opacity-80 hover:opacity-100 active:opacity-100 scale-[94%] hover:scale-[100%] transition-all" />
+                        </Link>
                     </div>
                 </div>
                 <div className="flex flex-col relative w-80 overflow-hidden grow gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-                <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="absolute -left-12 -top-64 blur-xl h-[400%] w-[2rem] md:hidden" />
+                    <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="absolute -left-12 -top-64 blur-xl h-[400%] w-[2rem] md:hidden" />
                     <div className="flex items-baseline gap-2">
                         <h3>Branding design</h3>
                         <p className="text-start text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500">4-7 days</p>
@@ -40,14 +42,16 @@ export default function ServicesList() {
                             <p className="text-start text-sm font-medium text-placeholder">Starts at</p>
                             <p className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500">1200$</p>
                         </div>
-                        {/* <Image src={arrow} alt="" /> */}
+                        <Link target="_blank" href="https://t.me/moondaydesign">
+                            <Image src={arrow} alt="" className="opacity-80 hover:opacity-100 active:opacity-100 scale-[94%] hover:scale-[100%] transition-all" />
+                        </Link>
                     </div>
                 </div>
             </div>
 
             <div className="flex flex-wrap md:flex-nowrap gap-4 w-full">
                 <div className="flex flex-col w-80 relative overflow-hidden grow gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-                <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="absolute -left-12 blur-xl h-[400%] md:h-[200%] -bottom-64 md:bottom-0 w-[2rem]" />
+                    <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="absolute -left-12 blur-xl h-[400%] md:h-[200%] -bottom-64 md:bottom-0 w-[2rem]" />
                     <div className="flex items-baseline gap-2">
                         <h3>Dapp design</h3>
                         <p className="text-start text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500">4-12 days</p>
@@ -60,11 +64,13 @@ export default function ServicesList() {
                             <p className="text-start text-sm font-medium text-placeholder">Starts at</p>
                             <p className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500">1800$</p>
                         </div>
-                        {/* <Image src={arrow} alt="" /> */}
+                        <Link target="_blank" href="https://t.me/moondaydesign">
+                            <Image src={arrow} alt="" className="opacity-80 hover:opacity-100 active:opacity-100 scale-[94%] hover:scale-[100%] transition-all" />
+                        </Link>
                     </div>
                 </div>
                 <div className="flex flex-col w-80 relative overflow-hidden grow gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-                <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="absolute -left-12 blur-xl h-[400%] bottom-0 w-[2rem] md:hidden" />
+                    <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="absolute -left-12 blur-xl h-[400%] bottom-0 w-[2rem] md:hidden" />
                     <div className="flex items-baseline gap-2">
                         <h3>Pitch Deck</h3>
                         <p className="text-start text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500">1-3 days</p>
@@ -77,7 +83,9 @@ export default function ServicesList() {
                             <p className="text-start text-sm font-medium text-placeholder">Starts at</p>
                             <p className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500">400$</p>
                         </div>
-                        {/* <Image src={arrow} alt="" /> */}
+                        <Link target="_blank" href="https://t.me/moondaydesign">
+                            <Image src={arrow} alt="" className="opacity-80 hover:opacity-100 active:opacity-100 scale-[94%] hover:scale-[100%] transition-all" />
+                        </Link>
                     </div>
                 </div>
             </div>
