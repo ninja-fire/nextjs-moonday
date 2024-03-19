@@ -1,14 +1,18 @@
 import { object, string, array } from 'yup';
-import TelegramBot from 'node-telegram-bot-api';
+import TelegramBot, { ChatId } from 'node-telegram-bot-api';
 import assert from 'assert';
+
+interface Needs {
+  [key: string]: string
+}
 
 const token = process.env.TG_TOKEN;
 const chatId = process.env.TG_CHAT_ID;
-const needs = {
+const needsss: Needs = {
     branding: '👁️',
     print: '🖼️',
     social: '🌟',
-    app: '🖥️',
+    dapp: '🖥️',
     website: '💎',
     pitchdeck: '🧩',
     metaverse: '👽',
@@ -20,8 +24,9 @@ const bot = new TelegramBot(token, {polling: false});
 const contactSchema = object({
     name: string().optional().min(3).max(256),
     text: string().optional().min(3).max(8000),
+    telegram: string().optional().min(3).max(500),
     email: string().email().required().min(3).max(256),
-    needs: array().of(string().oneOf(Object.keys(needs))).required()
+    wishlist: array().of(string().oneOf(Object.keys(needsss))).required()
 });
     
 
@@ -51,6 +56,7 @@ export async function POST(req: Request) {
       { strict: true },
     );
 
+    console.log(parsedContactData)
     // console.log('parsedContactData', parsedContactData);
   } catch (error: any) {
     parseContactErrors = error.errors
@@ -61,6 +67,10 @@ export async function POST(req: Request) {
       status: 'Error',
       errors: parseContactErrors
     });
+  }
+
+  if(!parsedContactData){
+    return;
   }
 
   try {
@@ -74,15 +84,20 @@ export async function POST(req: Request) {
       message += `\nText: ${parsedContactData.text}`;
     }
 
-    if (parsedContactData.needs.length > 0) {
-      message += `\nNeeds: ${parsedContactData.needs.reduce((ac: any, need: any, i: number) => {
-        return `\n   ${needs[need]} ${capitalizeFLetter(need)}${acc}`;
+    if (parsedContactData.telegram) {
+      message += `\nTG: ${parsedContactData.telegram}`;
+    }
+
+    if (parsedContactData.wishlist.length > 0) {
+      message += `\nNeeds: ${parsedContactData.wishlist.reduce((acc: any, need: any, i: number) => {
+        const icon = Object.keys(needsss).includes(need) ? needsss[need] : ""
+        return `\n   ${icon} ${capitalizeFLetter(need)}${acc}`;
       }, ``)}`;
     }
 
     console.log('message', message);
 
-    const response = await bot.sendMessage(chatId, message, {
+    const response = await bot.sendMessage(chatId as ChatId, message, {
       disable_web_page_preview: true,
       // parse_mode: 'MarkdownV2',
     });

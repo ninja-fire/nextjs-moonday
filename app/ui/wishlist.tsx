@@ -54,18 +54,17 @@ export default function Wishlist() {
     e.preventDefault()
 
     const formURL = e.target.action
-    const data = new FormData()
-
-    // Turn our formData state into data we can use with a form submission
-    Object.entries(inputs).forEach(([key, value]) => {
-      data.append(key, value);
-    })
-    data.append("wishlist", JSON.stringify(wishlistValues));
-
+    
     // POST the data to the URL of the form
     fetch(formURL, {
       method: "POST",
-      body: data,
+      body: JSON.stringify({
+        text: inputs.message,
+        telegram: inputs.telegram,
+        name: inputs.surname,
+        email: inputs.email,
+        wishlist: wishlistValues
+      }),
       headers: {
         'accept': 'application/json',
         'Content-Type': 'application/json',
