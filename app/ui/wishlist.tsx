@@ -17,6 +17,7 @@ export default function Wishlist() {
 
   const [title, setTitle] = useState("Your Wish List");
   const [step, setStep] = useState(0);
+  const [disabled, setDisabled] = useState(false);
   const [inputs, setInputs] = useState({
     surname: "",
     email: "",
@@ -27,18 +28,18 @@ export default function Wishlist() {
   const [wishlistValues, setWishlistValues] = useState<string[]>([]);
 
   const handleWishlistChange = (value: string) => {
-    if(wishlistValues.includes(value)){
-        const updatedValues = wishlistValues.filter(v => v != value);
-        setWishlistValues(updatedValues);
+    if (wishlistValues.includes(value)) {
+      const updatedValues = wishlistValues.filter(v => v != value);
+      setWishlistValues(updatedValues);
     } else {
       setWishlistValues([
-          ...wishlistValues,
-          value
+        ...wishlistValues,
+        value
       ]);
     }
   };
 
-    
+
   function handleNext() {
     setTitle("Contact Details");
     setStep(1);
@@ -52,9 +53,9 @@ export default function Wishlist() {
   const submitForm = (e: any) => {
     // We don't want the page to refresh
     e.preventDefault()
-    
+    setDisabled(!disabled);
     const formURL = e.target.action
-    
+
     // POST the data to the URL of the form
     fetch(formURL, {
       method: "POST",
@@ -113,23 +114,23 @@ export default function Wishlist() {
                 <div className="flex flex-col gap-6 w-full">
                   <div className="flex flex-col gap-2">
                     <label className="text-sm font-semibold text-label" htmlFor="surname">Your name</label>
-                    <input className="appearance-none forced-colors:appearance-auto flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
-                      type="text" name="surname" required id="surname" placeholder="John Doe" value={inputs.surname} onChange={e => { setInputs({ ...inputs, surname: e.target.value }); }} />
+                    <input className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] disabled:bg-background border border-transparentbg hover:border-placeholder disabled:border-transparentbg focus-visible:border-label outline-0 ring-0 disabled:opacity-50"
+                      type="text" name="surname" required id="surname" placeholder="John Doe" value={inputs.surname} disabled={disabled} onChange={e => { setInputs({ ...inputs, surname: e.target.value }); }} />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-sm font-semibold text-label" htmlFor="email">Your email</label>
-                    <input className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
-                     required type="email" name="email" id="email" placeholder="johndoe@mail.com" value={inputs.email} onChange={e => { setInputs({ ...inputs, email: e.target.value }); }} />
+                    <input className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] disabled:bg-background border border-transparentbg hover:border-placeholder disabled:border-transparentbg focus-visible:border-label outline-0 ring-0 disabled:opacity-50"
+                      required type="email" name="email" id="email" placeholder="johndoe@mail.com" value={inputs.email} disabled={disabled} onChange={e => { setInputs({ ...inputs, email: e.target.value }); }} />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-sm font-semibold text-label" htmlFor="telegram">Your telegram handle</label>
-                    <input className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
-                      type="text" name="telegram" id="telegram" placeholder="@johndoe" value={inputs.telegram} onChange={e => { setInputs({ ...inputs, telegram: e.target.value }); }} />
+                    <input className="flex px-4 py-3 text-xs font-medium text-label rounded-md bg-background hover:bg-transparentbg/[0.01] disabled:bg-background border border-transparentbg hover:border-placeholder disabled:border-transparentbg focus-visible:border-label outline-0 ring-0 disabled:opacity-50"
+                      type="text" name="telegram" id="telegram" placeholder="@johndoe" value={inputs.telegram} disabled={disabled} onChange={e => { setInputs({ ...inputs, telegram: e.target.value }); }} />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-sm font-semibold text-label" htmlFor="message">Describe your needs</label>
-                    <textarea className="flex px-4 py-3 text-xs font-medium text-label min-h-32 rounded-md bg-background hover:bg-transparentbg/[0.01] border border-transparentbg hover:border-placeholder focus-visible:border-label outline-0 ring-0"
-                      name="message" id="message" value={inputs.message} onChange={e => { setInputs({ ...inputs, message: e.target.value }); }}></textarea>
+                    <textarea className="flex px-4 py-3 text-xs font-medium text-label min-h-32 rounded-md bg-background hover:bg-transparentbg/[0.01 border border-transparentbg hover:border-placeholder disabled:border-transparentbg focus-visible:border-label outline-0 ring-0 disabled:opacity-50"
+                      name="message" id="message" value={inputs.message} disabled={disabled} onChange={e => { setInputs({ ...inputs, message: e.target.value }); }}></textarea>
                   </div>
                 </div>
                 :
@@ -138,8 +139,8 @@ export default function Wishlist() {
                     values={wishlistValues}
                     onUpdate={handleWishlistChange}
                   />
-                  </div>
-                
+                </div>
+
               }
             </div>
 
@@ -156,14 +157,14 @@ export default function Wishlist() {
                 :
                 <>
                   <div className="flex">
-                    <button type="button" onClick={handleBack} className="flex transition-all justify-center items-center px-16 py-4 text-label bg-bodybg hover:bg-transparentbg text-sm font-semibold rounded-full w-full overflow-hidden border border-transparentbg">
+                    <button type="button" disabled={disabled} onClick={handleBack} className="flex transition-all justify-center items-center px-16 py-4 text-label bg-bodybg hover:bg-transparentbg text-sm font-semibold rounded-full w-full overflow-hidden border border-transparentbg disabled:opacity-50 disabled:pointer-events-none">
                       <span className="inline">Back</span>
                     </button>
                   </div>
 
                   <div className="flex grow">
-                    <button type="submit" className="flex grow buttonBG transition-all justify-center items-center p-0.5 rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
-                      <div className="flex transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold">
+                    <button type="submit" disabled={disabled} className="group flex grow buttonBG transition-all justify-center items-center p-0.5 rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none disabled:opacity-50 disabled:pointer-events-none">
+                      <div className="flex transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold disabled:pointer-events-none">
                         <span className="inline">Send my request</span>
                       </div>
                     </button>
