@@ -1,5 +1,4 @@
 import Image from "next/image";
-import partners from "../../public/partners.png";
 import hydnlogo from '../../public/logopartners/hydnlogo.svg';
 import bhlogo from '../../public/logopartners/bhlogo.svg';
 import block3logo from '../../public/logopartners/block3logo.png';
