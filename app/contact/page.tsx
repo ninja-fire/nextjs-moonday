@@ -1,13 +1,17 @@
 import Image from "next/image";
 import CtaContact from "../ui/ctacontact";
 import Button from "../ui/button";
+import Wishlist from "../ui/wishlist";
 
 export default function Page() {
     return(
       <>
       <CtaContact />
 
-      <div className="light flex flex-col gap-6 py-16 p-40 bg-background overflow-y-b-clip rounded-3xl justify-center items-center border border-transparentbg shadow-innerwhole">
+      <Wishlist />
+      
+
+      {/* <div className="light flex flex-col gap-6 py-16 p-40 bg-background overflow-y-b-clip rounded-3xl justify-center items-center border border-transparentbg shadow-innerwhole">
 
         <div className="flex flex-col gap-4 justify-center items-center">
           <h2>What are your design needs?</h2>
@@ -112,7 +116,7 @@ export default function Page() {
               id="validate-wishlist-button" type="button">Validate My Wishlist</button></div>
           </div>
         </form>
-      </div>
+      </div> */}
       </>
     );
   }

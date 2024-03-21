@@ -23,7 +23,7 @@ export default function ServicesList() {
                             <p className="text-start text-sm font-medium text-placeholder">Starts at</p>
                             <p className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-500">800$</p>
                         </div>
-                        <Link target="_blank" href="https://t.me/moondaydesign?text=example">
+                        <Link target="_blank" href="https://t.me/moondaydesign">
                             <Image src={arrow} alt="" className="opacity-80 hover:opacity-100 active:opacity-100 scale-[94%] hover:scale-[100%] transition-all" />
                         </Link>
                     </div>
