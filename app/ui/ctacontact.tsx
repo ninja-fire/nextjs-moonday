@@ -9,7 +9,9 @@ export default function CtaContact() {
     <div className="flex flex-wrap lg:flex-nowrap w-full gap-16 justify-center items-center">
       <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center grow gap-4">
         <h2>Contact us</h2>
-        <p className="text-sm text-center lg:text-start font-medium text-caption leading-6">It is always easier to introduce your project from your own voice. Thus, you can directly book a free 30min intro call with our team by clicking on the button or scanning the QR code.</p>
+        <p className="text-sm text-center lg:text-start font-medium text-caption leading-6">
+          Ready to take the next step? Book a 30-minute intro call with us now and let's bring your vision to life together.
+        </p>
       </div>
       <div className="flex relative overflow-hidden lg:overflow-visible grow flex-col lg:flex-row gap-12 p-8 justify-center lg:justify-start items-center rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
       <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="absolute lg:hidden -left-12 blur-xl h-[200%] bottom-0 w-[2rem]" />
@@ -18,7 +20,7 @@ export default function CtaContact() {
         </div>
         <div className="flex flex-col gap-3 justify-center lg:justify-start lg:items-start items-center">
           <h3>Your intro call</h3>
-          <p className="text-sm text-center lg:text-start font-medium text-caption leading-6">It is always easier to introduce your project from your own voice.</p>
+          <p className="text-sm text-center lg:text-start font-medium text-caption leading-6">It is always easier to introduce your project in your own voice.</p>
           <Link
             href="https://cal.com/moondaystudio/introcall"
             target="_blank"

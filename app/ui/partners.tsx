@@ -42,8 +42,9 @@ export default function Partners() {
       </div>
       <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center grow gap-4">
         <h2>A complete Hub</h2>
-        <p className="text-sm text-center lg:text-start font-medium text-caption leading-6">You need a full range of services to build your project?
-          From ideation to product launch, Moonday can link you to high quality partners to help you build your idea.</p>
+        <p className="text-sm text-center lg:text-start font-medium text-caption leading-6">
+        Do you require a comprehensive suite of services to bring your project to life? <br/> From ideation to product launch, Moonday can connect you with top-tier partners to assist in realizing your vision.  
+        </p>
       </div>
     </div>
   );
