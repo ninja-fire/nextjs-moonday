@@ -119,6 +119,10 @@ h5 {
   inline-size: max-content;
 }
 
+.highlight {
+  color: var(--label);
+}
+
 @media only screen and (max-width: 768px) {
 
   h1 {
