@@ -5,6 +5,7 @@ import block3logo from '../../public/logopartners/block3logo.png';
 import radishlogo from '../../public/logopartners/radishlogo.svg';
 import chainimpactlogo from '../../public/logopartners/chainimpact.svg';
 import logoimg from '../../public/logo/logoimg.svg';
+import Button from "./button";
 
 export default function Partners() {
   return (
@@ -45,6 +46,9 @@ export default function Partners() {
         <p className="text-sm text-center lg:text-start font-medium text-caption leading-6">
         Do you require a comprehensive suite of services to bring your project to life? <br/> From ideation to product launch, Moonday can connect you with top-tier partners to assist in realizing your vision.  
         </p>
+        <div className="flex m-w-60">
+        <Button text="Press to Chat" target="_blank" href="https://t.me/moondaydesign" />
+        </div>
       </div>
     </div>
   );
