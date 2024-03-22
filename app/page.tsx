@@ -2,7 +2,6 @@ import Hero from "./ui/hero";
 import FolioCard from "./ui/folioCard";
 import ServicesList from "./ui/serviceslist";
 import CtaContact from "./ui/ctacontact";
-import Testimonials from "./ui/testimonials";
 import Wishlist from "./ui/wishlist";
 import Portfolio from "./ui/portfolio";
 import Button from "./ui/button";
