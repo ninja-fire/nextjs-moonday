@@ -9,7 +9,7 @@ export default function CtaContact() {
       <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center grow gap-4">
         <h2>Contact us</h2>
         <p className="text-sm text-center lg:text-start font-medium text-caption leading-6">
-          Ready to take the next step? Book a 30-minute intro call with us now and let's bring your vision to life together.
+          Ready to take the next step? Book a <span className="highlight">free 30-minute intro call</span> with us now and let's bring your vision to life together.
         </p>
       </div>
       <div className="flex relative overflow-hidden lg:overflow-visible grow flex-col lg:flex-row gap-12 p-8 justify-center lg:justify-start items-center rounded-3xl bg-background border border-transparentbg shadow-innerwhole">

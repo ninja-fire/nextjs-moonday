@@ -139,7 +139,8 @@ export default function Wishlist() {
               <div className="flex flex-col md:flex-row gap-2 md:gap-4 w-full">
                 {(step === 0) ?
                   <div className="flex grow">
-                    <button type="button" onClick={handleNext} className="flex grow buttonBG transition justify-center items-center p-px rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
+                    <button type="button" onClick={handleNext}
+                      className="group flex grow buttonBG transition justify-center items-center p-px rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none disabled:opacity-50 disabled:pointer-events-none">
                       <div className="flex bgeffect transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold">
                         <span className="inline">Validate my wishlist</span>
                       </div>
@@ -149,14 +150,16 @@ export default function Wishlist() {
                   :
                   <>
                     <div className="flex">
-                      <button type="button" disabled={disabled} onClick={handleBack} className="flex transition-all justify-center items-center px-16 py-4 text-label bg-bodybg hover:bg-transparentbg text-sm font-semibold rounded-full w-full overflow-hidden border border-transparentbg disabled:opacity-50 disabled:pointer-events-none">
+                      <button type="button" disabled={disabled} onClick={handleBack}
+                        className="flex transition-all justify-center items-center px-16 py-4 text-label bg-bodybg hover:bg-transparentbg text-sm font-semibold rounded-full w-full overflow-hidden border border-transparentbg disabled:opacity-50 disabled:pointer-events-none">
                         <span className="inline">Back</span>
                       </button>
                     </div>
 
                     <div className="flex grow">
-                      <button type="submit" disabled={disabled} className="group flex grow buttonBG transition-all justify-center items-center p-px rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none disabled:opacity-50 disabled:pointer-events-none">
-                        <div className="flex transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold disabled:pointer-events-none">
+                      <button type="submit" disabled={disabled}
+                        className="group flex grow buttonBG transition-all justify-center items-center p-px rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none disabled:opacity-50 disabled:pointer-events-none">
+                        <div className="flex bgeffect transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold disabled:pointer-events-none">
                           <span className="inline">Send my request</span>
                         </div>
                       </button>
