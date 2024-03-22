@@ -1,27 +1,25 @@
 import Image from "next/image";
-import computer from '../../public/computer.png';
-import projectsicon from '../../public/icons/projects.svg';
 import arrow from '../../public/icons/arrow.svg';
-import Button from "../ui/button";
 import CtaContact from "../ui/ctacontact";
-import partners from "../../public/partners.png";
-import Link from "next/link";
-import ContactForm from "../ui/wishlist";
+import Wishlist from "../ui/wishlist";
 import Partners from "../ui/partners";
+import ServicesList from "../ui/serviceslist";
+import servicesIllu from "../../public/servicesIllu.svg"
 
 export default function Page() {
   return (
     <>
       <div className="flex flex-wrap lg:flex-nowrap w-full gap-16 justify-center items-center">
-        <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center grow gap-4">
+        <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start gap-4">
           <h2>Our Services</h2>
-          <p className="text-sm text-center lg:text-start font-medium text-caption">It is always easier to introduce your project from your own voice. Thus, you can directly book a free 30min intro call with our team by clicking on the button or scanning the QR code.</p>
+          <p className="text-sm text-center lg:text-start font-medium text-caption leading-6">
+            Empowering Web3 pioneers with tailored solutions. Crafting Dapps, refining brands, perfecting pitch decks – redefining the web3 experiences together.
+          </p>
         </div>
-        <div><Image src={computer} alt="" /></div>
+        <div className="flex relative justify-center items-center w-full h-full"><Image src={servicesIllu} alt="" className="flex absolute scale-75" /></div>
       </div>
 
-      <div className="flex flex-col gap-8 justify-center items-center">
-        {/* <h2>Discover our other services</h2> */}
+      {/* <div className="flex flex-col gap-8 justify-center items-center">
         <div className="flex flex-wrap gap-4 items-center w-full justify-center">
           <Link href="/services/webdesign" className="flex flex-col w-80 grow gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
             <div className="flex items-baseline gap-2">
@@ -113,11 +111,13 @@ export default function Page() {
             </div>
           </Link>
         </div>
-      </div>
+      </div> */}
+
+      <ServicesList />
 
       <Partners />
-      
-      <ContactForm />
+
+      <Wishlist />
 
       <CtaContact />
     </>

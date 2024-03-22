@@ -11,6 +11,7 @@ import hydnlogo from '../public/logopartners/hydnlogo.svg';
 import bhlogo from '../public/logopartners/bhlogo.svg';
 import block3logo from '../public/logopartners/block3logo.png';
 import radishlogo from '../public/logopartners/radishlogo.svg';
+import Button from "./ui/button";
 
 
 
@@ -69,12 +70,18 @@ export default function Home() {
 
       <Portfolio />
 
-      <ServicesList />
+      <div className="flex flex-col gap-8 w-full justify-center items-center">
+        <h2>Our Services</h2>
+        <ServicesList />
+        <div className="flex grow md:grow-0">
+          <Button text="Discover all our services" target="" href="/services" />
+        </div>
+      </div>
 
       <Wishlist />
 
       <Testimonials />
-      
+
       <CtaContact />
     </>
   );

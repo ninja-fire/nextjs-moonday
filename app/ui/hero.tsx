@@ -22,7 +22,7 @@ export default function Hero() {
           <p className="text-sm font-medium text-center text-caption leading-6">We are a web3 design studio building impactful brands and super easy to use Dapps to help launch great ideas faster.</p>
         </div>
         <div className="flex m-w-60">
-        <Button text="Press to Chat" target="_blank" />
+        <Button text="Press to Chat" target="_blank" href="https://t.me/moondaydesign" />
         </div>
       </div>
     );
