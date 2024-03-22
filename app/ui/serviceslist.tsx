@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import projectsicon from '../../public/icons/projects.svg';
 import arrow from '../../public/icons/arrow.svg';
-import Button from "./button";
 import gradient from '../../public/gradient.webp';
 
 export default function ServicesList() {
@@ -89,36 +87,6 @@ export default function ServicesList() {
                     </div>
                 </div>
             </div>
-
-            {/* <Link href="/services/metaverse" className="flex flex-col w-80 grow gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-            <div className="flex items-baseline gap-2">
-              <h3>Metaverse</h3>
-              <p className="text-start text-sm font-medium text-caption">2-7 days</p>
-            </div>
-            <p className="text-start text-sm font-medium text-caption">It is always easier to introduce your project from your own voice. Thus, you can directly book a free 30min intro call with our team by clicking on the button or scanning the QR code.</p>
-            <div className="flex items-center justify-between">
-              <div className="flex items-baseline gap-2">
-                <p className="text-start text-sm font-medium text-caption">Starts at</p>
-                <p className="font-md text-label font-bold">800$</p>
-              </div>
-              <Image src={arrow} alt="" />
-            </div>
-          </Link>
-
-          <Link href="/services/consulting" className="flex flex-col w-80 grow gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-            <div className="flex items-baseline gap-2">
-              <h3>Consulting</h3>
-              <p className="text-start text-sm font-medium text-caption">2-7 days</p>
-            </div>
-            <p className="text-start text-sm font-medium text-caption">It is always easier to introduce your project from your own voice. Thus, you can directly book a free 30min intro call with our team by clicking on the button or scanning the QR code.</p>
-            <div className="flex items-center justify-between">
-              <div className="flex items-baseline gap-2">
-                <p className="text-start text-sm font-medium text-caption">Starts at</p>
-                <p className="font-md text-label font-bold">800$</p>
-              </div>
-              <Image src={arrow} alt="" />
-            </div>
-          </Link> */}
         </div>
     );
 }

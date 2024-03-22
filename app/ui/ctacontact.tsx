@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "./button";
 import qrcode from '../../public/qrcode.svg';
 import Link from "next/link";
 import gradient from '../../public/gradient.webp';
@@ -14,7 +13,7 @@ export default function CtaContact() {
         </p>
       </div>
       <div className="flex relative overflow-hidden lg:overflow-visible grow flex-col lg:flex-row gap-12 p-8 justify-center lg:justify-start items-center rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-      <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="absolute lg:hidden -left-12 blur-xl h-[200%] bottom-0 w-[2rem]" />
+        <Image priority quality={50} src={gradient} alt="" width={1080} height={1080} className="absolute lg:hidden -left-12 blur-xl h-[200%] bottom-0 w-[2rem]" />
         <div className="flex grow justify-center items-center p-6 border border-dashed border-transparentbg rounded-2xl">
           <Image src={qrcode} alt="" width={160} height={160} className="max-w-fit" />
         </div>

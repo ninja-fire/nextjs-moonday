@@ -12,24 +12,24 @@ import contacticon from '../../public/icons/contact.svg'
 const links = [
   {
     name: 'Home',
-  href: '/',
-  icon: homeicon
-},
+    href: '/',
+    icon: homeicon
+  },
   {
     name: 'Services',
     href: '/services',
     icon: servicesicon,
   },
-  { 
+  {
     name: 'Projects',
     href: '/projects',
     icon: projectsicon
-},
-    {
+  },
+  {
     name: 'Contact',
     href: '/contact',
     icon: contacticon,
-    },
+  },
 ];
 
 export default function NavLinks() {
@@ -48,13 +48,13 @@ export default function NavLinks() {
                 'bg-transparentbg text-label opacity-100': pathname === link.href,
               },
             )}
-            
+
           >
             <Image
-            priority
-            src={LinkIcon} 
-            alt=''
-            className="opacity-80 group-hover/{icon}:opacity-100"
+              priority
+              src={LinkIcon}
+              alt=''
+              className="opacity-80 group-hover/{icon}:opacity-100"
             />
             <p className="transition-all hidden sm:block">{link.name}</p>
           </Link>

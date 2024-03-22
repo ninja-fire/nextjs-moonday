@@ -7,8 +7,8 @@ import Wishlist from "../ui/wishlist";
 import Partners from "../ui/partners";
 
 export default function Page() {
-    return (
-      <>
+  return (
+    <>
       <div className="flex flex-wrap lg:flex-nowrap w-full gap-16 justify-center items-center">
         <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center grow gap-4">
           <h2>Our Work</h2>
@@ -115,6 +115,6 @@ export default function Page() {
       <Partners />
 
       <Wishlist />
-      </>
-    );
-  }
+    </>
+  );
+}

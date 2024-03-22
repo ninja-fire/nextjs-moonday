@@ -4,7 +4,7 @@
 
 /* Change autocomplete styles in WebKit */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -114,15 +114,6 @@ h5 {
   position: absolute;
   left: 0;
 }
-
-/* .light {
-  background-image: url(../../public/light.png);
-  background-repeat: no-repeat;
-  background-position-x: -5rem;
-  background-position-y: 4rem;
-  background-size: cover;
-
-} */
 
 .inline {
   inline-size: max-content;
