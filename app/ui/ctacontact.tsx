@@ -24,7 +24,7 @@ export default function CtaContact() {
           <Link
             href="https://cal.com/moondaystudio/introcall"
             target="_blank"
-            className="flex buttonBG transition-all justify-center items-center p-0.5 rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
+            className="flex buttonBG transition-all justify-center items-center p-px rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
             <div className="flex bgeffect transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold">
               <span className="inline">Book your call</span>
             </div>

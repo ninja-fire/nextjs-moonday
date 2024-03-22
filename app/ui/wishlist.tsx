@@ -95,7 +95,7 @@ export default function Wishlist() {
             <h4 className="text-center">Your request has been submitted!</h4>
             <Image priority={true} src={planet} alt="" width={960} height={960} className="flex w-80" />
             <p className="text-sm font-medium text-center text-caption">Your message has been sent successfully. We'll get back to you as soon as possible. In the meantime, feel free to explore more of our work and services.</p>
-            <Link href='/projects' className="flex buttonBG transition justify-center items-center p-0.5 rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
+            <Link href='/projects' className="flex buttonBG transition justify-center items-center p-px rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
               <div className="flex transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold">
                 <span className="inline">Discover our work</span>
               </div>
@@ -144,7 +144,7 @@ export default function Wishlist() {
             <div className="flex flex-col md:flex-row gap-2 md:gap-4 w-full">
               {(step === 0) ?
                 <div className="flex grow">
-                  <button type="button" onClick={handleNext} className="flex grow buttonBG transition justify-center items-center p-0.5 rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
+                  <button type="button" onClick={handleNext} className="flex grow buttonBG transition justify-center items-center p-px rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none">
                     <div className="flex bgeffect transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold">
                       <span className="inline">Validate my wishlist</span>
                     </div>
@@ -160,7 +160,7 @@ export default function Wishlist() {
                   </div>
 
                   <div className="flex grow">
-                    <button type="submit" disabled={disabled} className="group flex grow buttonBG transition-all justify-center items-center p-0.5 rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none disabled:opacity-50 disabled:pointer-events-none">
+                    <button type="submit" disabled={disabled} className="group flex grow buttonBG transition-all justify-center items-center p-px rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none disabled:opacity-50 disabled:pointer-events-none">
                       <div className="flex transition-all justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold disabled:pointer-events-none">
                         <span className="inline">Send my request</span>
                       </div>
