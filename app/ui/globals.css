@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid --caption;
+  -webkit-text-fill-color: var(--label);
+  /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background: #141414;
@@ -19,5 +35,120 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.noise {
+  background-image: url(../../public/noise.svg);
+  background-blend-mode: screen;
+}
+
+.bgeffect {
+  background-image: url(../../public/bgeffect.png);
+  background-blend-mode: screen;
+}
+
+h1 {
+  font-family: "Clash Display Variable";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--label);
+}
+
+h2 {
+  font-family: "Clash Display Variable";
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--label);
+
+}
+
+h3 {
+  font-family: "Clash Display Variable";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.045rem;
+  text-transform: capitalize;
+  color: var(--label);
+
+}
+
+h4 {
+  font-family: "Clash Display Variable";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--label);
+
+}
+
+h5 {
+  font-family: "Clash Display Variable";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.875rem;
+
+}
+
+.buttonBG {
+  background-image: url(../../public/gradient.webp);
+  background-clip: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.buttonBG:hover {
+  background-size: revert;
+}
+
+.light-left {
+  position: absolute;
+  left: 0;
+}
+
+.inline {
+  inline-size: max-content;
+}
+
+.highlight {
+  color: var(--label);
+}
+
+@media only screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 2.125rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h5 {
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  .noise {
+    background-image: url(../../public/noise-mobile.svg);
   }
 }

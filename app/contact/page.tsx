@@ -1,3 +1,11 @@
+import CtaContact from "../ui/ctacontact";
+import Wishlist from "../ui/wishlist";
+
 export default function Page() {
-    return <p>Contact Page</p>;
-  }
+  return (
+    <>
+      <CtaContact />
+      <Wishlist />
+    </>
+  );
+}
