@@ -1,43 +1,26 @@
 import Image from "next/image";
-import avatar from '../../public/avatar.png';
-
+import { testimonials } from "../data/site";
+import SectionHeading from "./sectionheading";
+import Reveal from "./reveal";
 
 export default function Testimonials() {
   return (
-    <div className="flex flex-col gap-8 justify-center items-center w-full">
-      <h2>Dont trust verify</h2>
-      <div className="flex flex-wrap md:flex-nowrap gap-4 items-center w-full justify-center">
-        <div className="flex flex-col grow max-w-80 md:max-w-full gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-          <div className="flex gap-2 items-center">
-            <Image src={avatar} alt="" />
-            <div className="flex flex-col">
-              <p className="font-sm text-label font-semibold">John Doe</p>
-              <p className="text-start text-xs font-medium">Blabla CTO</p>
+    <section aria-labelledby="testimonials" className="flex flex-col gap-12 w-full">
+      <SectionHeading id="testimonials" center eyebrow="Don't trust, verify" title="What clients say" />
+      <ul className="grid gap-4 md:grid-cols-3">
+        {testimonials.map((t, i) => (
+          <Reveal as="li" key={t.name} delay={i * 120} className="flex flex-col justify-between gap-8 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
+            <blockquote className="text-sm font-medium text-caption leading-6">“{t.quote}”</blockquote>
+            <div className="flex gap-3 items-center">
+              <Image src={t.avatar} alt="" width={48} height={48} className="rounded-full" />
+              <div className="flex flex-col">
+                <p className="text-sm text-label font-semibold">{t.name}</p>
+                <p className="text-xs font-medium text-placeholder">{t.role}{t.note && ` · ${t.note}`}</p>
+              </div>
             </div>
-          </div>
-          <p className="text-start text-sm font-medium text-caption leading-6">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
-        </div>
-        <div className="flex flex-col grow max-w-80 md:max-w-full gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-          <div className="flex gap-2 items-center">
-            <Image src={avatar} alt="" />
-            <div className="flex flex-col">
-              <p className="font-sm text-label font-semibold">John Doe</p>
-              <p className="text-start text-xs font-medium">Blabla CTO</p>
-            </div>
-          </div>
-          <p className="text-start text-sm font-medium text-caption leading-6">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
-        </div>
-        <div className="flex flex-col grow max-w-80 md:max-w-full gap-6 px-8 py-6 rounded-3xl bg-background border border-transparentbg shadow-innerwhole">
-          <div className="flex gap-2 items-center">
-            <Image src={avatar} alt="" />
-            <div className="flex flex-col">
-              <p className="font-sm text-label font-semibold">John Doe</p>
-              <p className="text-start text-xs font-medium">Blabla CTO</p>
-            </div>
-          </div>
-          <p className="text-start text-sm font-medium text-caption leading-6">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.”</p>
-        </div>
-      </div>
-    </div>
+          </Reveal>
+        ))}
+      </ul>
+    </section>
   );
 }

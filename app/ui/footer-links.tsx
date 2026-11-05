@@ -1,63 +1,25 @@
-'use client';
-
 import Link from 'next/link';
+import { links as siteLinks, packages } from '../data/site';
+import { projects } from '../data/projects';
 
 const links = [
     {
         name: 'Services',
         href: '/services',
-        sublinks: [
-            {
-                name: "Branding",
-                href: '/services',
-                // href: '/services/branding',
-            },
-            {
-                name: "UX/UI Design",
-                href: '/services',
-                // href: '/services/uxuidesign',
-            },
-            {
-                name: "Consulting",
-                href: '/services',
-                // href: '/services/consulting',
-            },
-        ]
+        sublinks: packages.map((p) => ({ name: p.title, href: '/services' })),
     },
     {
-        name: 'Projects',
-        href: '/projects',
-        sublinks: [
-            {
-                name: "Coinhouse",
-                href: '/projects/coinhouse',
-            },
-            {
-                name: "Linxo",
-                href: '/projects/linxo',
-            },
-            {
-                name: "Looter",
-                href: '/projects/looter',
-            },
-            {
-                name: "Trooper",
-                href: '/projects/trooper',
-            },
-        ]
+        name: 'Work',
+        href: '/work',
+        sublinks: projects.slice(0, 4).map((p) => ({ name: p.title, href: `/work/${p.slug}` })),
     },
     {
         name: 'Contact',
         href: '/contact',
         sublinks: [
-            {
-                name: "Book a Call",
-                href: '/contact',
-            },
-            {
-                name: "Write us!",
-                href: '/contact',
-            },
+            { name: "Book a call", href: '/contact#book' },
+            { name: "Send a brief", href: '/contact#brief' },
+            { name: "Chat on Telegram", href: siteLinks.telegram },
         ]
     },
 ];
@@ -74,10 +36,12 @@ export default function FooterLinks() {
                         </Link>
                         <div className='flex flex-col justify-start items-start gap-1'>
                             {link.sublinks.map((sublink) => {
+                                const external = sublink.href.startsWith('http');
                                 return (
                                     <Link
                                         key={sublink.name}
                                         href={sublink.href}
+                                        {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
                                         className="text-caption hover:text-placeholder text-xs font-medium">{sublink.name}
                                     </Link>
                                 );

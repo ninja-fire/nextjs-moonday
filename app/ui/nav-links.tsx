@@ -21,8 +21,8 @@ const links = [
     icon: servicesicon,
   },
   {
-    name: 'Projects',
-    href: '/projects',
+    name: 'Work',
+    href: '/work',
     icon: projectsicon
   },
   {
@@ -38,23 +38,25 @@ export default function NavLinks() {
     <>
       {links.map((link) => {
         const LinkIcon = link.icon;
+        const active = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
         return (
           <Link
             key={link.name}
             href={link.href}
+            aria-current={active ? 'page' : undefined}
+            aria-label={link.name}
             className={clsx(
-              "group/{icon} transition-all flex p-2 gap-2 items-center justify-start rounded-xl text-sm font-medium text-caption hover:opacity-100 hover:bg-transparentbg hover:text-label md:flex-none",
+              "group/icon transition-all flex p-2 gap-2 items-center justify-start rounded-xl text-sm font-medium text-caption hover:opacity-100 hover:bg-transparentbg hover:text-label md:flex-none",
               {
-                'bg-transparentbg text-label opacity-100': pathname === link.href,
+                'bg-transparentbg text-label opacity-100': active,
               },
             )}
 
           >
             <Image
-              priority
               src={LinkIcon}
               alt=''
-              className="opacity-80 group-hover/{icon}:opacity-100"
+              className="opacity-80 group-hover/icon:opacity-100"
             />
             <p className="transition-all hidden sm:block">{link.name}</p>
           </Link>
