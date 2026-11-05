@@ -1,6 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-background: #141414;
+  --color-label: #E7EEEB;
+  --color-caption: #A8ADAA;
+  --color-placeholder: #7D817F;
+  --color-transparentbg: rgba(231, 238, 235, 0.16);
+  --color-bodybg: #1D1D1D;
+
+  --shadow-whitepers: 0px 0px 16px 0px rgba(255, 255, 255, 0.15);
+  --shadow-innerwhole: 0px 0px 16px 0px rgba(0, 0, 0, 0.40) inset;
+}
+
+/* Tailwind v3 defaults this site was designed with: grey borders, pointer cursor on buttons. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 /* Change autocomplete styles in WebKit */
 input:-webkit-autofill,
@@ -32,11 +58,6 @@ body {
   background: var(--background);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
 
 .noise {
   background-image: url(../../public/noise.svg);
@@ -49,7 +70,7 @@ body {
 }
 
 h1 {
-  font-family: "Clash Display Variable";
+  font-family: var(--font-clash), sans-serif;
   font-size: 3rem;
   font-style: normal;
   font-weight: 700;
@@ -58,7 +79,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Clash Display Variable";
+  font-family: var(--font-clash), sans-serif;
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
@@ -68,7 +89,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Clash Display Variable";
+  font-family: var(--font-clash), sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 600;
@@ -80,7 +101,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Clash Display Variable";
+  font-family: var(--font-clash), sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
@@ -90,7 +111,7 @@ h4 {
 }
 
 h5 {
-  font-family: "Clash Display Variable";
+  font-family: var(--font-clash), sans-serif;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
@@ -150,5 +171,67 @@ h5 {
 
   .noise {
     background-image: url(../../public/noise-mobile.svg);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Small gradient label above section titles. */
+.eyebrow {
+  font-size: 1rem;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #c7d2fe, #6366f1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  width: fit-content;
+}
+
+/* Elements with .reveal fade up once they enter the viewport (see ui/reveal.tsx).
+   Only when JS runs, so content never stays hidden. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 120s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-marquee {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
   }
 }
