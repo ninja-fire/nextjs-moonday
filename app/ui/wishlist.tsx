@@ -46,10 +46,10 @@ export default function Wishlist() {
     setStep(0);
   }
 
-  const submitForm = (e: any) => {
+  const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setDisabled(!disabled);
-    const formURL = e.target.action
+    const formURL = e.currentTarget.action
 
     fetch(formURL, {
       method: "POST",

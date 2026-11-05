@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./ui/globals.css";
 import { fontclash } from "./ui/font";
 import SideNav from './ui/sidenav';
 import Footer from './ui/footer';
 import Image from 'next/image';
 import gradient from '../public/gradient.webp';
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Moonday - Web3 Design Studio",
