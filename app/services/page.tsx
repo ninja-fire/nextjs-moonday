@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <section className="flex flex-wrap lg:flex-nowrap w-full gap-16 justify-center items-center">
+      <section className="flex flex-wrap lg:flex-nowrap w-full gap-8 lg:gap-16 justify-center items-center">
         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start gap-6">
           <h1>Our services</h1>
           <p className="text-sm text-center lg:text-start font-medium text-caption leading-6 max-w-xl">
@@ -25,7 +25,8 @@ export default function Page() {
           </p>
           <BookCall location="services-hero" />
         </div>
-        <div className="hidden lg:flex relative justify-center items-center w-full min-h-64"><Image src={servicesIllu} alt="" className="flex absolute scale-75" /></div>
+        {/* Below lg the wire drawing heads the page, in flow; on lg it sits beside the copy. */}
+        <div className="order-first flex relative justify-center items-center w-full max-w-80 lg:order-none lg:max-w-none lg:min-h-64"><Image src={servicesIllu} alt="" className="h-auto w-full lg:absolute lg:w-auto lg:scale-75" /></div>
       </section>
 
       <Packages />

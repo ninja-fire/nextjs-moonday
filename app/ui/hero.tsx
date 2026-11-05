@@ -18,10 +18,22 @@ import ethPoster from "../../public/work/ethzurich/poster-eth.webp";
 import ethPosterHand from "../../public/work/ethzurich/poster-hand.webp";
 import ethTote from "../../public/work/ethzurich/tote.webp";
 import ethCity from "../../public/work/ethzurich/illustration-city.webp";
+import ethVenue from "../../public/work/ethzurich/illustration-venue.webp";
+import ethEther from "../../public/work/ethzurich/illustration-ether.webp";
+import ethPosterType from "../../public/work/ethzurich/poster-type.webp";
+import ethKeyVisual from "../../public/work/ethzurich/key-visual.webp";
+import linxoBank from "../../public/linxo1.webp";
+import linxoIcons from "../../public/linxo4.webp";
+import trooperHire from "../../public/work/trooper/trooper02.webp";
+import trooperBrand from "../../public/work/trooper/trooper03.webp";
+import looterBlur from "../../public/work/looter/looterblur.png";
+import coinhouseMockup from "../../public/coinhouse-mockup-pages.webp";
+import venaDiscover from "../../public/work/venalabs/v2-discover.webp";
 
 type Shot = { src: StaticImageData; slug: string; title: string; alt: string };
 
-// Two columns of work drifting past the hero window in opposite directions. Mixed formats on purpose.
+// Columns of work drifting past the hero window in opposite directions. Mixed formats on purpose,
+// and no shot appears twice: phones get the first two columns, desktop all four.
 const columns: Shot[][] = [
   [
     { src: trooperMascot, slug: "trooper", title: "Trooper", alt: "Trooper's 3D mascot in a purple helmet" },
@@ -38,10 +50,22 @@ const columns: Shot[][] = [
     { src: ethPosterHand, slug: "ethzurich", title: "ETHZürich", alt: "ETHZürich poster with an illustrated hand" },
     { src: looterPitch, slug: "looter", title: "Looter", alt: "Looter pitch deck slides" },
   ],
+  [
+    { src: linxoBank, slug: "linxo", title: "Linxo Connect", alt: "Linxo illustration: a person unlocking a bank" },
+    { src: ethVenue, slug: "ethzurich", title: "ETHZürich", alt: "ETHZürich illustration of people networking in a conference venue" },
+    { src: trooperBrand, slug: "trooper", title: "Trooper", alt: "Trooper app screens on a purple background" },
+    { src: looterBlur, slug: "looter", title: "Looter", alt: "Looter 3D character in a hoodie and AR goggles" },
+    { src: ethPosterType, slug: "ethzurich", title: "ETHZürich", alt: "Typographic ETHZürich welcome poster in pink" },
+  ],
+  [
+    { src: coinhouseMockup, slug: "coinhouse", title: "Coinhouse", alt: "Coinhouse website pages and a laptop on a lavender background" },
+    { src: ethEther, slug: "ethzurich", title: "ETHZürich", alt: "ETHZürich illustration of two faces around the Ethereum diamond" },
+    { src: venaDiscover, slug: "venalabs", title: "VenaLabs", alt: "VenaLabs Discover page: recommended quest, airdrops and today's routine" },
+    { src: linxoIcons, slug: "linxo", title: "Linxo Connect", alt: "Linxo icon set in yellow and orange" },
+    { src: ethKeyVisual, slug: "ethzurich", title: "ETHZürich", alt: "ETHZürich key visual" },
+    { src: trooperHire, slug: "trooper", title: "Trooper", alt: "Trooper hiring platform on desktop and mobile" },
+  ],
 ];
-
-// The work behind the disc: four drifting columns (two on mobile).
-const grid = [columns[0], columns[1], [...columns[0]].reverse(), [...columns[1]].reverse()];
 
 function Column({ shots, reverse = false, first = false, className }: { shots: Shot[]; reverse?: boolean; first?: boolean; className?: string }) {
   // The list is rendered twice so the loop is seamless; the copy is hidden from assistive tech.
@@ -160,7 +184,7 @@ export default function Hero() {
           {/* Through the disc: the work, drifting. Above the copy: as it opens, it swallows the headline. */}
           <div aria-hidden className="hero-work pointer-events-none absolute inset-0 z-10 bg-void">
             <div className="hero-grid grid h-full grid-cols-2 gap-3 px-3 lg:grid-cols-4">
-              {grid.map((shots, i) => (
+              {columns.map((shots, i) => (
                 <Column key={i} shots={shots} reverse={i % 2 === 1} first={i < 2} className={clsx(i % 2 === 1 && "-mt-32", i > 1 && "max-lg:hidden")} />
               ))}
             </div>
