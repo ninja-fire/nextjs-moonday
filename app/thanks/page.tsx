@@ -24,8 +24,8 @@ export default async function Page({ searchParams }: PageProps<"/thanks">) {
           : "Thanks for telling us about your project. We'll get back to you soon, usually with a few questions or a link to book a call."}
       </p>
       <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-        <Link href="/work" className="flex buttonBG transition-all justify-center items-center p-px rounded-full overflow-hidden shadow-whitepers active:shadow-none">
-          <span className="flex justify-center items-center px-16 py-4 bg-bodybg w-full rounded-full text-label text-sm font-semibold">See our work</span>
+        <Link href="/work" className="flex justify-center items-center px-16 py-4 rounded-full bg-label text-void text-sm font-semibold transition-colors hover:bg-white">
+          See our work
         </Link>
         <a href={links.telegram} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center px-16 py-4 text-label bg-bodybg hover:bg-transparentbg text-sm font-semibold rounded-full border border-transparentbg">
           Chat on Telegram

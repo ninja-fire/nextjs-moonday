@@ -8,16 +8,13 @@ const logos = Array.from({ length: 40 }, (_, i) => `/logoclient/logoclient-${Str
  * Seamless loop: two identical groups side by side, each sliding by exactly its own width.
  * Spacing is padding inside each item (not flex gap) so both groups are the same width to the pixel.
  */
-function Row({ items, reverse = false }: { items: string[]; reverse?: boolean }) {
+function Row({ items }: { items: string[] }) {
   const group = (hidden: boolean) => (
-    <ul
-      aria-hidden={hidden || undefined}
-      className="flex shrink-0 animate-marquee items-center will-change-transform"
-      style={reverse ? { animationDirection: "reverse" } : undefined}
-    >
+    <ul aria-hidden={hidden || undefined} className="flex shrink-0 animate-marquee items-center will-change-transform">
       {items.map((src) => (
-        <li key={src} className="shrink-0 px-6 md:px-10">
-          <img src={src} alt="" loading="lazy" decoding="async" className="h-8 w-auto opacity-60 grayscale md:h-10" />
+        <li key={src} className="shrink-0 px-7 md:px-9">
+          {/* One colour for every logo: mixed brand colours are what made the wall look cheap. */}
+          <img src={src} alt="" loading="lazy" decoding="async" className="h-6 w-auto opacity-55 brightness-0 invert md:h-7" />
         </li>
       ))}
     </ul>
@@ -30,17 +27,17 @@ function Row({ items, reverse = false }: { items: string[]; reverse?: boolean })
   );
 }
 
+// The client logos run through a slot cut in the plate.
 export default function LogoWall() {
   return (
-    <section aria-label="Clients" className="flex flex-col gap-10 w-full">
-      <p className="text-center text-sm font-medium text-caption">
-        Trusted by <span className="highlight font-semibold">60+ brands</span>, from global names to DeFi launches
+    <section aria-label="Clients" className="flex w-full flex-col items-center gap-5 md:flex-row md:gap-8">
+      <p className="shrink-0 text-center text-sm font-medium leading-6 text-caption md:max-w-[11rem] md:text-left">
+        <span className="highlight font-semibold">60+ brands</span> in 10+ years, from global names to DeFi launches
       </p>
-      <div className="relative flex flex-col gap-8 overflow-hidden">
-        <Row items={logos.slice(0, 20)} />
-        <Row items={logos.slice(20)} reverse />
-        <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-linear-to-r from-bodybg md:w-40" />
-        <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-linear-to-l from-bodybg md:w-40" />
+      <div className="hole flex h-16 w-full min-w-0 items-center rounded-full md:h-20">
+        <Row items={logos} />
+        <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 z-2 w-16 bg-linear-to-r from-void md:w-28" />
+        <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 z-2 w-16 bg-linear-to-l from-void md:w-28" />
       </div>
     </section>
   );

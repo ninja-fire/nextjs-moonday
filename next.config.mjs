@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    // Next 16 only serves allow-listed qualities. 50 is for the blurred background gradients.
+    // Next 16 only serves allow-listed qualities. 50: blurred gradients and the hero's drifting work.
     qualities: [50, 75],
   },
   async redirects() {

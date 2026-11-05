@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Hero from "./ui/hero";
-import LogoWall from "./ui/logowall";
 import ProjectCard from "./ui/projectcard";
 import Packages from "./ui/packages";
 import Process from "./ui/process";
@@ -8,7 +7,6 @@ import Testimonials from "./ui/testimonials";
 import Faq from "./ui/faq";
 import FinalCta from "./ui/finalcta";
 import SectionHeading from "./ui/sectionheading";
-import Reveal from "./ui/reveal";
 import { projects } from "./data/projects";
 import { faq } from "./data/site";
 
@@ -24,18 +22,15 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <LogoWall />
 
-      <section aria-labelledby="work" className="flex flex-col gap-12 w-full">
+      <section aria-labelledby="work" className="flex flex-col gap-16 md:gap-24 w-full">
         <div className="flex flex-wrap gap-6 items-end justify-between">
-          <SectionHeading id="work" eyebrow="Selected work" title="Brands and products we've shaped" />
+          <SectionHeading id="work" eyebrow="Selected work" title="Brands and products we've shaped" text="Scroll slowly: each one comes into the light as it lines up." />
           <Link href="/work" className="text-sm font-semibold text-caption hover:text-label transition-colors">All case studies →</Link>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="flex flex-col gap-20 md:gap-32">
           {featured.map((p, i) => (
-            <Reveal key={p.slug} delay={i * 120}>
-              <ProjectCard project={p} sizes="(min-width: 768px) 33vw, 100vw" />
-            </Reveal>
+            <ProjectCard key={p.slug} project={p} index={i} large sizes="(min-width: 768px) 58vw, 100vw" />
           ))}
         </div>
       </section>

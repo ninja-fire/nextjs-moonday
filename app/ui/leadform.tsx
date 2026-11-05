@@ -135,10 +135,12 @@ export default function LeadForm() {
         </div>
       )}
 
+      {/* Same look as the primary CTA (ui/bookcall.tsx). */}
       <button type="submit" disabled={sending}
-        className="flex buttonBG transition-all justify-center items-center p-px rounded-full w-full overflow-hidden shadow-whitepers active:shadow-none disabled:opacity-50 disabled:pointer-events-none">
-        <span className="flex transition-all justify-center items-center px-8 md:px-16 py-4 bg-bodybg w-full rounded-full text-label hover:bg-bodybg/[0.96] text-sm font-semibold whitespace-nowrap">
-          {sending ? "Sending…" : "Send my request"}
+        className="group/cta flex w-full items-center justify-between gap-4 rounded-full bg-label py-1.5 pl-7 pr-1.5 text-sm font-semibold whitespace-nowrap text-void shadow-[0_8px_30px_-8px_rgba(200,180,255,0.45)] transition-all hover:bg-white active:scale-[0.99] disabled:pointer-events-none disabled:opacity-50">
+        {sending ? "Sending…" : "Send my request"}
+        <span aria-hidden className="relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-void shadow-[inset_0_3px_8px_rgba(0,0,0,0.6)]">
+          <span className="light absolute inset-0 scale-[0.55] rounded-full transition-transform duration-500 ease-out group-hover/cta:scale-100" />
         </span>
       </button>
     </form>

@@ -9,7 +9,7 @@ import servicesicon from '../../public/icons/services.svg'
 import projectsicon from '../../public/icons/projects.svg'
 import contacticon from '../../public/icons/contact.svg'
 
-const links = [
+export const links = [
   {
     name: 'Home',
     href: '/',
@@ -46,7 +46,7 @@ export default function NavLinks() {
             aria-current={active ? 'page' : undefined}
             aria-label={link.name}
             className={clsx(
-              "group/icon transition-all flex p-2 gap-2 items-center justify-start rounded-xl text-sm font-medium text-caption hover:opacity-100 hover:bg-transparentbg hover:text-label md:flex-none",
+              "group/icon transition-all flex p-2.5 gap-3 items-center justify-start rounded-xl text-sm font-medium text-caption hover:opacity-100 hover:bg-transparentbg hover:text-label",
               {
                 'bg-transparentbg text-label opacity-100': active,
               },
@@ -56,9 +56,10 @@ export default function NavLinks() {
             <Image
               src={LinkIcon}
               alt=''
-              className="opacity-80 group-hover/icon:opacity-100"
+              className="shrink-0 opacity-80 group-hover/icon:opacity-100"
             />
-            <p className="transition-all hidden sm:block">{link.name}</p>
+            {/* Label shows only while the rail is open; aria-label carries the name otherwise. */}
+            <p className="whitespace-nowrap [text-shadow:0_1px_10px_rgba(0,0,0,0.7)] opacity-0 transition-opacity duration-200 group-hover/nav:opacity-100 group-has-[:focus-visible]/nav:opacity-100">{link.name}</p>
           </Link>
         );
       })}

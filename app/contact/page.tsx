@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <FinalCta location="contact" />
-      <section aria-labelledby="brief-title" id="brief" className="flex flex-col gap-12 w-full max-w-(--breakpoint-md) scroll-mt-8">
+      <FinalCta location="contact" proof />
+      <section aria-labelledby="brief-title" id="brief" className="flex flex-col gap-12 w-full max-w-(--breakpoint-md) scroll-mt-28">
         <SectionHeading
           id="brief-title"
           center

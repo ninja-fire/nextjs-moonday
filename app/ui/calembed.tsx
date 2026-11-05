@@ -54,24 +54,38 @@ export default function CalEmbed({ location }: { location: string }) {
 
   useEffect(() => {
     const el = ref.current;
-    if (!el || el.dataset.loaded) return;
-    el.dataset.loaded = "true";
-    const Cal = loadCal();
-    Cal("init", "intro", { origin: "https://app.cal.com" });
-    const ns = Cal.ns!.intro;
-    ns("inline", { elementOrSelector: el, calLink: links.calLink, config: { layout: "month_view", theme: "dark" } });
-    ns("ui", { theme: "dark", hideEventTypeDetails: false, layout: "month_view" });
-    ns("on", {
-      action: "bookingSuccessfulV2",
-      callback: () => {
-        track("Booking", { location });
-        router.push("/thanks?via=call");
+    if (!el) return;
+    const mount = () => {
+      if (el.dataset.loaded) return;
+      el.dataset.loaded = "true";
+      const Cal = loadCal();
+      Cal("init", "intro", { origin: "https://app.cal.com" });
+      const ns = Cal.ns!.intro;
+      ns("inline", { elementOrSelector: el, calLink: links.calLink, config: { layout: "month_view", theme: "dark" } });
+      ns("ui", { theme: "dark", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { dark: { "cal-brand": "#E7EEEB" } } });
+      ns("on", {
+        action: "bookingSuccessfulV2",
+        callback: () => {
+          track("Booking", { location });
+          router.push("/thanks?via=call");
+        },
+      });
+    };
+    // cal.com is about 1 MB: only fetch it as the calendar comes near the screen.
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        observer.disconnect();
+        mount();
       },
-    });
+      { rootMargin: "800px 0px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, [location, router]);
 
   return (
-    <div className="w-full min-h-[36rem] rounded-3xl overflow-hidden bg-background border border-transparentbg shadow-innerwhole">
+    <div className="w-full min-h-[36rem]">
       <div ref={ref} className="w-full h-full min-h-[36rem]" />
       <noscript>
         <a href={links.bookCall} className="block p-8 text-center text-label underline">Open the booking page</a>

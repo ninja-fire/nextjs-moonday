@@ -8,10 +8,10 @@ export default function SectionHeading({ eyebrow, title, text, id, center = fals
   center?: boolean;
 }) {
   return (
-    <div className={clsx("flex flex-col gap-4 max-w-(--breakpoint-sm)", center && "items-center text-center mx-auto")}>
+    <div className={clsx("flex flex-col gap-5 max-w-2xl", center && "items-center text-center mx-auto")}>
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-      <h2 id={id}>{title}</h2>
-      {text && <p className="text-sm font-medium text-caption leading-6">{text}</p>}
+      <h2 id={id} className="text-balance">{title}</h2>
+      {text && <p className="text-base font-medium text-caption leading-7 max-w-lg">{text}</p>}
     </div>
   );
 }
