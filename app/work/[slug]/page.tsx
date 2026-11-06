@@ -91,8 +91,9 @@ function HighlightBlock({ h, index }: { h: Highlight; index: number }) {
     );
   }
 
-  // Image row, title and text below.
-  const cols = h.images.length >= 3 ? "md:grid-cols-3" : h.images.length === 2 ? "md:grid-cols-2" : "";
+  // Image row, title and text below. Four images go 2×2 rather than leave one alone on a second row.
+  const n = h.images.length;
+  const cols = n === 3 || n > 4 ? "md:grid-cols-3" : n === 2 || n === 4 ? "md:grid-cols-2" : "";
   return (
     <Reveal className="flex flex-col gap-8">
       <div className={`grid items-stretch gap-6 ${cols}`}>

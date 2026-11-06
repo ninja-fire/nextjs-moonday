@@ -32,6 +32,22 @@ import coinhousePages from "../../public/Coinhouse-gallery.webp";
 import coinhouseCoins from "../../public/coinhouseCoins.webp";
 import coinhouseCard from "../../public/cartevoeux-gallery.webp";
 
+import familyCover from "../../public/work/family/cover.webp";
+import familyGarment from "../../public/work/family/garment.webp";
+import familyScan from "../../public/work/family/scan.webp";
+import familyChat from "../../public/work/family/chat.webp";
+import familySystem from "../../public/work/family/design-system.webp";
+import familyLanding from "../../public/work/family/landing.webp";
+import familyMobile from "../../public/work/family/mobile.webp";
+
+import madperpsLogo from "../../public/work/madperps/logo.webp";
+import madperpsMascots from "../../public/work/madperps/mascots.webp";
+import madperpsWebsite from "../../public/work/madperps/website.webp";
+import madperpsJackpot from "../../public/work/madperps/jackpot.webp";
+import madperpsCroupier from "../../public/work/madperps/croupier.webp";
+import madperpsTickets from "../../public/work/madperps/tickets.webp";
+import madperpsWheel from "../../public/work/madperps/wheel.webp";
+
 import linxoCover from "../../public/linxo3.webp";
 import linxoBank from "../../public/linxo1.webp";
 import linxoBanner from "../../public/linxo2.webp";
@@ -136,152 +152,6 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    slug: "looter",
-    title: "Looter",
-    tagline: "A DeFi exchange with the soul of a treasure hunt",
-    sector: "DeFi exchange",
-    cover: { src: looterCover, alt: "Looter brand visuals with the 3D mascot and the DEX interface" },
-    tags: ["Branding", "dApp design", "3D design", "Pitch deck"],
-    featured: true,
-    summary:
-      "Looter is a deflationary DEX where trading is a strategy game: users build yield strategies, mine liquidity and compete for loot. The team needed a brand loud enough for the Degen crowd and an interface clear enough to make its tokenomics click. We designed the identity, the 3D world, the dApp, the investor pitch deck and the social kit.",
-    challenges: [
-      "Make complex tokenomics clear and engaging.",
-      "Design a visual identity that's both sophisticated and appealing to the Degen community.",
-      "Integrate gamification into the experience without it feeling bolted on.",
-    ],
-    approach: [
-      {
-        name: "Define",
-        intro:
-          "DeFi has a retention problem: products are powerful but confusing, and most users leave before they get it. Research and user interviews pointed to three things Looter had to nail: tokenomics people can understand, an identity people want to belong to, and game mechanics that feel natural.",
-      },
-      {
-        name: "Design",
-        intro:
-          "We built the brand on neon and cyberpunk aesthetics: sophisticated enough to be taken seriously, playful enough for the Degen crowd. In the product, every complex mechanic got a visual cue and an intuitive UI element, so users understand what they're doing while enjoying the game around it.",
-      },
-      {
-        name: "Refine",
-        intro:
-          "Several rounds of user testing and iterative design sessions tuned every detail, from the color system to the micro-interactions.",
-      },
-    ],
-    highlightsTitle: "Design highlights",
-    highlights: [
-      {
-        title: "A guided swap that never traps you",
-        images: [
-          { src: looterStep1, alt: "Looter swap flow, step 1: choose tokens" },
-          { src: looterStep2, alt: "Looter swap flow, step 2: confirm" },
-          { src: looterStep3, alt: "Looter swap flow, step 3: transaction notification" },
-        ],
-        text: "Swapping is broken into clear steps, paired with real-time notifications. Users aren't stuck watching a spinner: they can keep exploring the app while the transaction runs.",
-      },
-      {
-        title: "Motion that sells the brand",
-        images: [
-          { src: looterLogoAnimated, alt: "Animated Looter logo", unoptimized: true },
-          { src: looterCardAnimated, alt: "Animated LOOT / ETH card", unoptimized: true },
-          { src: looterBtnAnimated, alt: "Animated Open App button", unoptimized: true },
-        ],
-        text: "The animated logo, the living LOOT / ETH card and the fluid \"Open App\" button make the product instantly recognizable, and stop the scroll on social media, where a DeFi project wins or loses its community.",
-      },
-      {
-        title: "A 3D world to belong to",
-        images: [
-          { src: looterKey, alt: "3D cryptographic key", unoptimized: true },
-          { src: looterChest, alt: "3D glowing loot chest", unoptimized: true },
-          { src: looterBlur, alt: "3D character in a hoodie and AR goggles" },
-        ],
-        text: "A glowing cube etched with circuits for the decentralized tech underneath, a key for the cryptography that secures access, and a hooded figure in AR goggles for the Looter user. Together they turn a DEX into a world people want to be part of.",
-      },
-    ],
-    gallery: [
-      { src: looterPitch, alt: "Looter pitch deck slides" },
-      { src: looterLogo, alt: "Looter logo" },
-      { src: looterLanding, alt: "Looter landing page" },
-      { src: looterSwap, alt: "Looter swap interface" },
-    ],
-  },
-  {
-    slug: "trooper",
-    title: "Trooper",
-    tagline: "A job market where gamers get hired, and get paid safely",
-    sector: "Web3 gaming job market",
-    cover: { src: trooperCover, alt: "Trooper app screens: gamer profile, job listings and landing page" },
-    tags: ["Branding", "3D mascot", "Landing page", "Web app UX/UI"],
-    featured: true,
-    summary:
-      "Trooper connects gamers, guilds and studios in the play-to-earn economy. Companies post paid missions, players apply with a profile that proves what they can do, and a smart-contract escrow makes sure everyone gets paid. We designed the brand, the 3D mascot and the whole product, from first wireframes to polished UI.",
-    challenges: [
-      "Connect gamers and gaming professionals on one intuitive platform.",
-      "Make a blockchain escrow feel secure and simple, without asking gamers to read a whitepaper.",
-      "Use gamification to build trust between strangers.",
-    ],
-    approach: [
-      {
-        name: "Define",
-        intro:
-          "Research covered the audience, the competitive landscape and the latest trends in blockchain and pro gaming. Workshops with the founders kept the vision and the product goals aligned from day one.",
-        items: [
-          { title: "Branding", text: "A unique identity that speaks to gamers and studios alike." },
-          { title: "User profiles", text: "Profiles rich enough to hire from, for players and professionals." },
-          { title: "Job listings", text: "Posting and applying in a few steps, with no friction." },
-          { title: "Escrow", text: "A secure, blockchain-based escrow for every payment." },
-        ],
-      },
-      {
-        name: "Design",
-        intro:
-          "A bold, futuristic identity with a 3D mascot players remember. Profiles act as a player's CV, studios list a mission in minutes, and funds are locked in a smart contract before a job starts. Badges and XP make reliability visible at a glance.",
-      },
-      {
-        name: "Refine",
-        intro:
-          "Several rounds of user testing showed where the experience held up and where it didn't, and fed straight back into the design: better search and filters, and clearer review and reputation signals.",
-      },
-    ],
-    highlightsTitle: "What testing revealed, and how we fixed it",
-    highlights: [
-      {
-        title: "A brand players remember",
-        images: [
-          { src: trooperWordmark, alt: "Trooper wordmark in purple on a dark background" },
-          { src: trooperMascot, alt: "Trooper 3D mascot wearing a purple helmet" },
-          { src: trooperCrates, alt: "3D Trooper loot crates falling under parachutes" },
-        ],
-        text: "A bold, futuristic identity that reflects both the innovation of blockchain and the excitement of gaming, built to stand out in a crowded, noisy space. The 3D mascot gives the brand a face players remember.",
-      },
-      {
-        title: "Studios couldn't tell applicants apart",
-        images: [{ src: trooperP1, alt: "Trooper applicant review screen with player comments and badges" }],
-        issue:
-          "Studios hiring several players for one mission struggled to filter applications. XP and badges alone weren't enough to separate a reliable player from a lucky one.",
-        solution:
-          "Detailed reviews with comments for each player, so studios can read what previous employers thought. Badges were reworked to surface specific skills instead of a generic score.",
-      },
-      {
-        title: "Will anyone see my job post?",
-        images: [{ src: trooperP2, alt: "Trooper job post with social sharing options" }],
-        issue: "Early users worried that a brand-new platform wouldn't attract enough gamers to their missions.",
-        solution: "One-tap sharing of any job post to social media. Every studio becomes a distribution channel.",
-      },
-      {
-        title: "Finding anything took too long",
-        images: [{ src: trooperP3, alt: "Trooper global search results across gamers, guilds and jobs" }],
-        issue: "Finding a specific profile or opportunity meant hunting through separate sections.",
-        solution:
-          "A global search across the whole platform, with filters for skills, game genres, job types and guild specialties, and results from every category on one page.",
-      },
-    ],
-    gallery: [
-      { src: trooper01, alt: "Trooper interface overview" },
-      { src: trooper02, alt: "Trooper interface details" },
-      { src: trooper03, alt: "Trooper brand and mascot" },
-    ],
-  },
   {
     slug: "venalabs",
     title: "VenaLabs",
@@ -449,6 +319,7 @@ export const projects: Project[] = [
     sector: "Digital currency exchange",
     cover: { src: coinhouseCover, alt: "Coinhouse website pages and a laptop on a lavender background" },
     tags: ["Rebranding", "Landing page", "Social content", "Motion design"],
+    featured: true,
     summary:
       "Coinhouse is a digital currency exchange. We worked on its rebranding, landing pages, social content and motion design, carrying one gradient-led identity from the website to 3D coins and seasonal cards.",
     highlightsTitle: "Selected work",
@@ -459,15 +330,253 @@ export const projects: Project[] = [
           { src: coinhouseLogo, alt: "Coinhouse logo" },
           { src: coinhouseCard, alt: "Coinhouse 2023 greeting card with a neon 2023 and a bitcoin" },
         ],
+        text: "One gradient, from violet through pink to cyan, carries the brand. It runs from the logo to the seasonal cards, so every touchpoint reads as Coinhouse at a glance.",
       },
       {
         title: "Website and landing pages",
         images: [{ src: coinhousePages, alt: "Coinhouse managed portfolio landing page" }],
+        text: "Landing pages that make crypto investing feel calm and clear: the managed portfolio page lays out three strategies side by side and explains how it works in three steps.",
       },
       {
         title: "3D and social content",
         images: [{ src: coinhouseCoins, alt: "3D Ethereum, Uniswap and USDC coins" }],
+        text: "3D coins in the brand's colors give the website and social posts one visual language for every asset Coinhouse lists.",
       },
+    ],
+  },
+  {
+    slug: "family",
+    title: "Family",
+    tagline: "Buy, own and resell fashion, physical and on-chain",
+    sector: "Phygital fashion marketplace",
+    cover: { src: familyCover, alt: "Family marketplace screens around a laptop showing the landing page" },
+    tags: ["Product design", "Landing page", "Mobile app UX/UI", "Design system"],
+    summary:
+      "Family sells clothing collections where every garment carries a chip linked to an NFT. Scan it, and ownership is certified on-chain. Resell it, and ownership moves with it. We designed the landing page, the mobile app and its design system, so buying and reselling feel as easy as on any online shop and customers never have to think about the blockchain underneath.",
+    challenges: [
+      "Merge familiar e-commerce with Web3 ownership in one seamless experience.",
+      "Put chip scanning into buying and selling without adding friction.",
+      "Make a second-hand market people trust, right inside the app.",
+    ],
+    approach: [
+      {
+        name: "Define",
+        intro:
+          "The hard part wasn't the shop, it was the link between a physical garment and its digital twin. We mapped every moment a customer touches the chip: first scan, proof of ownership, resale, transfer. Each one had to feel secure, but never technical.",
+      },
+      {
+        name: "Design",
+        intro:
+          "The UI borrows the patterns people already know from clothing marketplaces, then adds the Web3 layer quietly on top. A Vinted-style live chat lets buyers and sellers agree on price and delivery, and dedicated buying and selling flows put chip scanning exactly where it's needed, and nowhere else.",
+      },
+      {
+        name: "Refine",
+        intro:
+          "We tested every scenario with potential users, from scanning a garment for the first time to handing over ownership on the resale market, and removed friction at each step.",
+      },
+    ],
+    highlightsTitle: "Design highlights",
+    highlights: [
+      {
+        title: "Scan, chat, sell",
+        images: [
+          { src: familyGarment, alt: "Family garment page with its details and ownership history" },
+          { src: familyScan, alt: "Family scan screen to confirm the reception of a garment" },
+          { src: familyChat, alt: "Family direct messaging between a buyer and a seller" },
+        ],
+        text: "One scan links a physical garment to its NFT, proving it's authentic and adding it to your wardrobe in the app. Live chat lets buyers and sellers talk during a sale, which builds trust and makes negotiating easy.",
+      },
+      {
+        title: "A brand system for two worlds",
+        images: [{ src: familySystem, alt: "Family design system components" }],
+        text: "Logo, type, color and icons speak to Web3 natives and mainstream shoppers alike. One design system keeps the landing page and the app consistent.",
+      },
+    ],
+    gallery: [
+      { src: familyLanding, alt: "Family landing page: The Home Of Phygitals" },
+      { src: familyMobile, alt: "Family mobile screens: register, inventory, sell and garment details" },
+    ],
+  },
+  {
+    slug: "madperps",
+    title: "MadPerps",
+    tagline: "A loud, honey-dripping brand for a perpetual futures DEX on Berachain",
+    sector: "Perpetual futures DEX",
+    year: "2024",
+    cover: { src: madperpsLogo, alt: "The MadPerps logo: a bear head with a hypnotic eye next to the MAD PERPS wordmark" },
+    tags: ["Branding", "Mascots", "Website design", "Illustration"],
+    testimonial: "Mad Bear",
+    summary:
+      "MadPerps is a perpetual futures DEX built on Berachain. We designed its brand, a family of bear mascots, the website and a series of illustrations for its MAD HONEY token: a psychedelic, honey-dripping world that stands out in a sea of look-alike trading platforms.",
+    highlightsTitle: "Selected work",
+    highlights: [
+      {
+        title: "A logo and a gang of bears",
+        images: [
+          { src: madperpsLogo, alt: "MadPerps logo and wordmark" },
+          { src: madperpsMascots, alt: "Four MadPerps bear heads in yellow, purple, orange and pink, each with its own expression" },
+        ],
+        text: "Berachain's bear, gone mad: four bear heads in the brand's four colors, each with its own expression, and a chunky wordmark that drips into PERPS.",
+      },
+      {
+        title: "The website",
+        images: [{ src: madperpsWebsite, alt: "MadPerps website screens on mobile: steps to trade, features and calls to action" }],
+        text: "Perp trading explained in a few bold blocks, from the steps to your first trade to the features, with honey dripping over every section.",
+      },
+      {
+        title: "MAD HONEY illustrations",
+        images: [
+          { src: madperpsJackpot, alt: "MAD HONEY jackpot sign above a slot machine with bear symbols" },
+          { src: madperpsCroupier, alt: "A bear croupier in a waistcoat behind a game table" },
+          { src: madperpsTickets, alt: "PLAY lettering above a pile of MAD HONEY tickets" },
+          { src: madperpsWheel, alt: "A roulette wheel in the brand colors, dripping with honey" },
+        ],
+        text: "A casino-themed series for the MAD HONEY token: jackpot, croupier, tickets and wheel, all in the same textured, honey-soaked style.",
+      },
+    ],
+  },
+  {
+    slug: "looter",
+    title: "Looter",
+    tagline: "A DeFi exchange with the soul of a treasure hunt",
+    sector: "DeFi exchange",
+    cover: { src: looterCover, alt: "Looter brand visuals with the 3D mascot and the DEX interface" },
+    tags: ["Branding", "dApp design", "3D design", "Pitch deck"],
+    summary:
+      "Looter is a deflationary DEX where trading is a strategy game: users build yield strategies, mine liquidity and compete for loot. The team needed a brand loud enough for the Degen crowd and an interface clear enough to make its tokenomics click. We designed the identity, the 3D world, the dApp, the investor pitch deck and the social kit.",
+    challenges: [
+      "Make complex tokenomics clear and engaging.",
+      "Design a visual identity that's both sophisticated and appealing to the Degen community.",
+      "Integrate gamification into the experience without it feeling bolted on.",
+    ],
+    approach: [
+      {
+        name: "Define",
+        intro:
+          "DeFi has a retention problem: products are powerful but confusing, and most users leave before they get it. Research and user interviews pointed to three things Looter had to nail: tokenomics people can understand, an identity people want to belong to, and game mechanics that feel natural.",
+      },
+      {
+        name: "Design",
+        intro:
+          "We built the brand on neon and cyberpunk aesthetics: sophisticated enough to be taken seriously, playful enough for the Degen crowd. In the product, every complex mechanic got a visual cue and an intuitive UI element, so users understand what they're doing while enjoying the game around it.",
+      },
+      {
+        name: "Refine",
+        intro:
+          "Several rounds of user testing and iterative design sessions tuned every detail, from the color system to the micro-interactions.",
+      },
+    ],
+    highlightsTitle: "Design highlights",
+    highlights: [
+      {
+        title: "A guided swap that never traps you",
+        images: [
+          { src: looterStep1, alt: "Looter swap flow, step 1: choose tokens" },
+          { src: looterStep2, alt: "Looter swap flow, step 2: confirm" },
+          { src: looterStep3, alt: "Looter swap flow, step 3: transaction notification" },
+        ],
+        text: "Swapping is broken into clear steps, paired with real-time notifications. Users aren't stuck watching a spinner: they can keep exploring the app while the transaction runs.",
+      },
+      {
+        title: "Motion that sells the brand",
+        images: [
+          { src: looterLogoAnimated, alt: "Animated Looter logo", unoptimized: true },
+          { src: looterCardAnimated, alt: "Animated LOOT / ETH card", unoptimized: true },
+          { src: looterBtnAnimated, alt: "Animated Open App button", unoptimized: true },
+        ],
+        text: "The animated logo, the living LOOT / ETH card and the fluid \"Open App\" button make the product instantly recognizable, and stop the scroll on social media, where a DeFi project wins or loses its community.",
+      },
+      {
+        title: "A 3D world to belong to",
+        images: [
+          { src: looterKey, alt: "3D cryptographic key", unoptimized: true },
+          { src: looterChest, alt: "3D glowing loot chest", unoptimized: true },
+          { src: looterBlur, alt: "3D character in a hoodie and AR goggles" },
+        ],
+        text: "A glowing cube etched with circuits for the decentralized tech underneath, a key for the cryptography that secures access, and a hooded figure in AR goggles for the Looter user. Together they turn a DEX into a world people want to be part of.",
+      },
+    ],
+    gallery: [
+      { src: looterPitch, alt: "Looter pitch deck slides" },
+      { src: looterLogo, alt: "Looter logo" },
+      { src: looterLanding, alt: "Looter landing page" },
+      { src: looterSwap, alt: "Looter swap interface" },
+    ],
+  },
+  {
+    slug: "trooper",
+    title: "Trooper",
+    tagline: "A job market where gamers get hired, and get paid safely",
+    sector: "Web3 gaming job market",
+    cover: { src: trooperCover, alt: "Trooper app screens: gamer profile, job listings and landing page" },
+    tags: ["Branding", "3D mascot", "Landing page", "Web app UX/UI"],
+    summary:
+      "Trooper connects gamers, guilds and studios in the play-to-earn economy. Companies post paid missions, players apply with a profile that proves what they can do, and a smart-contract escrow makes sure everyone gets paid. We designed the brand, the 3D mascot and the whole product, from first wireframes to polished UI.",
+    challenges: [
+      "Connect gamers and gaming professionals on one intuitive platform.",
+      "Make a blockchain escrow feel secure and simple, without asking gamers to read a whitepaper.",
+      "Use gamification to build trust between strangers.",
+    ],
+    approach: [
+      {
+        name: "Define",
+        intro:
+          "Research covered the audience, the competitive landscape and the latest trends in blockchain and pro gaming. Workshops with the founders kept the vision and the product goals aligned from day one.",
+        items: [
+          { title: "Branding", text: "A unique identity that speaks to gamers and studios alike." },
+          { title: "User profiles", text: "Profiles rich enough to hire from, for players and professionals." },
+          { title: "Job listings", text: "Posting and applying in a few steps, with no friction." },
+          { title: "Escrow", text: "A secure, blockchain-based escrow for every payment." },
+        ],
+      },
+      {
+        name: "Design",
+        intro:
+          "A bold, futuristic identity with a 3D mascot players remember. Profiles act as a player's CV, studios list a mission in minutes, and funds are locked in a smart contract before a job starts. Badges and XP make reliability visible at a glance.",
+      },
+      {
+        name: "Refine",
+        intro:
+          "Several rounds of user testing showed where the experience held up and where it didn't, and fed straight back into the design: better search and filters, and clearer review and reputation signals.",
+      },
+    ],
+    highlightsTitle: "What testing revealed, and how we fixed it",
+    highlights: [
+      {
+        title: "A brand players remember",
+        images: [
+          { src: trooperWordmark, alt: "Trooper wordmark in purple on a dark background" },
+          { src: trooperMascot, alt: "Trooper 3D mascot wearing a purple helmet" },
+          { src: trooperCrates, alt: "3D Trooper loot crates falling under parachutes" },
+        ],
+        text: "A bold, futuristic identity that reflects both the innovation of blockchain and the excitement of gaming, built to stand out in a crowded, noisy space. The 3D mascot gives the brand a face players remember.",
+      },
+      {
+        title: "Studios couldn't tell applicants apart",
+        images: [{ src: trooperP1, alt: "Trooper applicant review screen with player comments and badges" }],
+        issue:
+          "Studios hiring several players for one mission struggled to filter applications. XP and badges alone weren't enough to separate a reliable player from a lucky one.",
+        solution:
+          "Detailed reviews with comments for each player, so studios can read what previous employers thought. Badges were reworked to surface specific skills instead of a generic score.",
+      },
+      {
+        title: "Will anyone see my job post?",
+        images: [{ src: trooperP2, alt: "Trooper job post with social sharing options" }],
+        issue: "Early users worried that a brand-new platform wouldn't attract enough gamers to their missions.",
+        solution: "One-tap sharing of any job post to social media. Every studio becomes a distribution channel.",
+      },
+      {
+        title: "Finding anything took too long",
+        images: [{ src: trooperP3, alt: "Trooper global search results across gamers, guilds and jobs" }],
+        issue: "Finding a specific profile or opportunity meant hunting through separate sections.",
+        solution:
+          "A global search across the whole platform, with filters for skills, game genres, job types and guild specialties, and results from every category on one page.",
+      },
+    ],
+    gallery: [
+      { src: trooper01, alt: "Trooper interface overview" },
+      { src: trooper02, alt: "Trooper interface details" },
+      { src: trooper03, alt: "Trooper brand and mascot" },
     ],
   },
   {
