@@ -10,7 +10,7 @@ export default function Packages() {
           as="li"
           key={p.slug}
           delay={i * 80}
-          className="group/pkg relative grid gap-5 border-b border-white/[.08] py-8 md:grid-cols-[5rem_1fr_1.3fr_auto] md:gap-10 md:py-10 transition-colors hover:bg-white/[.015]"
+          className="group/pkg relative grid gap-5 border-b border-white/[.08] px-4 py-8 md:grid-cols-[5rem_1fr_1.3fr_auto] md:gap-10 md:px-8 md:py-10 transition-colors hover:bg-white/[.015]"
         >
           <div className="flex items-center gap-3 md:flex-col md:items-start">
             <span aria-hidden className="hole h-5 w-10 rounded-full">

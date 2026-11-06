@@ -22,7 +22,6 @@ export type Package = {
   text: string;
   items: string[];
   duration: string;
-  // TODO(founders): prices below are the ones previously on the site; confirm per package.
   startsAt?: string;
 };
 
@@ -31,9 +30,9 @@ export const packages: Package[] = [
     slug: "brand",
     title: "Brand launch",
     text: "Everything you need to look credible on day one: a name-worthy logo, a visual system and the kit to launch it.",
-    items: ["Logo & visual identity", "Brand guidelines", "Social & launch kit", "Pitch deck"],
+    items: ["Logo & visual identity", "Brand guidelines", "Social & launch kit"],
     duration: "4-7 days",
-    startsAt: "$1,200",
+    startsAt: "$3,500",
   },
   {
     slug: "product",
@@ -41,7 +40,7 @@ export const packages: Package[] = [
     text: "Apps, dApps and dashboards people understand on first use, from flows and wireframes to a full design system.",
     items: ["UX flows & wireframes", "UI & design system", "Prototypes", "Developer-ready Figma"],
     duration: "4-12 days",
-    startsAt: "$1,800",
+    startsAt: "$4,500",
   },
   {
     slug: "website",
@@ -49,7 +48,7 @@ export const packages: Package[] = [
     text: "A landing page or marketing site designed to convert, ready for your developers or a no-code tool.",
     items: ["Landing & marketing pages", "Responsive layouts", "Copy structure", "Handoff for devs or no-code"],
     duration: "2-4 days",
-    startsAt: "$800",
+    startsAt: "$2,500",
   },
   {
     slug: "motion",
@@ -57,7 +56,7 @@ export const packages: Package[] = [
     text: "Make the brand move: animations, product videos and decks that stop the scroll and win the room.",
     items: ["Brand animation", "Product videos", "Showreels", "Pitch & sales decks"],
     duration: "1-3 days",
-    startsAt: "$400",
+    startsAt: "$1,000",
   },
 ];
 
@@ -87,7 +86,7 @@ export const faq = [
   },
   {
     q: "How long does it take?",
-    a: "Each package shows a typical duration: a few days for a deck or a landing page, up to about two weeks for a product. You get a timeline with the quote.",
+    a: "Each package shows a typical duration: a few days for a deck or a landing page, up to 12 days for a product. You get a timeline with the quote.",
   },
   {
     q: "Do you only work with Web3 projects?",
@@ -137,6 +136,6 @@ export const testimonials: Testimonial[] = [
 // Lead form options, shared by the form and the API so they can't drift apart.
 export const needs = packages.map((p) => ({ value: p.slug, label: p.title }));
 
-export const budgets = ["Under $2k", "$2k-5k", "$5k-10k", "$10k+", "Not sure yet"];
+export const budgets = ["Under $3k", "$3k-6k", "$6k-12k", "$12k+", "Not sure yet"];
 
 export const timelines = ["ASAP", "Within a month", "1-3 months", "Just exploring"];
